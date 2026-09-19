@@ -6,6 +6,11 @@ use App\Models\Product;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Product creation. SKU is omitted here on purpose — Product::booted()
+ * generates it. Barcode uniqueness excludes trashed rows; thresholds and
+ * flags get server defaults only when the client sends nothing.
+ */
 class StoreProductRequest extends FormRequest
 {
     public function authorize(): bool

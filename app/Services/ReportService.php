@@ -9,8 +9,17 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Read-only reporting queries. All methods return full Collections (no
+ * pagination) — they feed exports via exportData(), so callers should scope
+ * by branch/date to bound memory on large datasets.
+ */
 final class ReportService
 {
+    /**
+     * On-hand value per product per branch (quantity × cost_price).
+     * Valued at cost, not selling price — this is inventory worth, not revenue.
+     */
     public function inventoryValuation(array $filters = []): Collection
     {
         return StockLevel::query()
@@ -29,6 +38,7 @@ final class ReportService
             ->get();
     }
 
+    /** Stock rows below their product's min_stock_threshold. */
     public function lowStock(array $filters = []): Collection
     {
         return StockLevel::query()
@@ -47,6 +57,7 @@ final class ReportService
             ->get();
     }
 
+    /** Filtered movement ledger, newest first. */
     public function stockMovements(array $filters = []): Collection
     {
         return StockMovement::query()
@@ -60,6 +71,11 @@ final class ReportService
             ->get();
     }
 
+    /**
+     * Units sold + revenue per product from sale movements. Revenue prefers
+     * the recorded total_amount and falls back to quantity × current
+     * selling_price when the movement has none (historical price drift caveat).
+     */
     public function productPerformance(array $filters = []): Collection
     {
         return StockMovement::query()
@@ -78,6 +94,7 @@ final class ReportService
             ->get();
     }
 
+    /** Transfer history with status/branch/date filters, newest first. */
     public function transferHistory(array $filters = []): Collection
     {
         return StockTransfer::query()
@@ -91,6 +108,11 @@ final class ReportService
             ->get();
     }
 
+    /**
+     * Flatten a report into plain arrays for CSV/Excel exporters.
+     * Unknown types yield an empty set (not an error) so callers can
+     * validate the type parameter themselves.
+     */
     public function exportData(string $type, array $filters = []): array
     {
         $data = match ($type) {

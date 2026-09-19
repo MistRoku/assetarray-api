@@ -5,6 +5,9 @@ namespace App\Policies;
 use App\Models\Supplier;
 use App\Models\User;
 
+/**
+ * Supplier authorization. Same bar as products: managers and above.
+ */
 class SupplierPolicy
 {
     public function create(User $user): bool

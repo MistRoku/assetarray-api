@@ -6,6 +6,11 @@ use App\Models\StockTransfer;
 use Illuminate\Support\Str;
 use RuntimeException;
 
+/**
+ * Generates collision-checked stock transfer codes.
+ *
+ * Used by TransferService and StockTransfer::booted() when no code is given.
+ */
 final class TransferCodeGenerator
 {
     private const MAX_ATTEMPTS = 10;
@@ -30,6 +35,10 @@ final class TransferCodeGenerator
         throw new RuntimeException('Unable to generate a unique transfer code after '.self::MAX_ATTEMPTS.' attempts.');
     }
 
+    /**
+     * Check for an existing code, including trashed rows when the model
+     * is soft-deletable, so deleted codes are never re-issued.
+     */
     private static function exists(string $code): bool
     {
         $query = StockTransfer::where('transfer_code', $code);

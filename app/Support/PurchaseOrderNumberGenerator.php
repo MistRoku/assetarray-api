@@ -6,6 +6,12 @@ use App\Models\PurchaseOrder;
 use Illuminate\Support\Str;
 use RuntimeException;
 
+/**
+ * Generates collision-checked purchase order numbers.
+ *
+ * The YYYYMM prefix scopes numbers by month for readability; uniqueness
+ * comes from the random suffix + DB UNIQUE, not the date.
+ */
 final class PurchaseOrderNumberGenerator
 {
     private const MAX_ATTEMPTS = 10;
@@ -30,6 +36,10 @@ final class PurchaseOrderNumberGenerator
         throw new RuntimeException('Unable to generate a unique purchase order number after '.self::MAX_ATTEMPTS.' attempts.');
     }
 
+    /**
+     * Check for an existing number, including trashed rows when the model
+     * is soft-deletable, so deleted numbers are never re-issued.
+     */
     private static function exists(string $number): bool
     {
         $query = PurchaseOrder::where('po_number', $number);

@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * Current on-hand quantity of one product at one branch.
+ *
+ * Unique per (product_id, branch_id). All writes go through services with
+ * lockForUpdate() — never update quantity directly, to avoid lost updates.
+ */
 class StockLevel extends Model
 {
     use HasFactory;
@@ -20,13 +26,21 @@ class StockLevel extends Model
         'quantity' => 'integer',
     ];
 
-    /** @return BelongsTo<Product, $this> */
+    /**
+     * Product this level tracks.
+     *
+     * @return BelongsTo<Product, $this>
+     */
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch holding the stock.
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);

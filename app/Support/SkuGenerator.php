@@ -6,6 +6,12 @@ use App\Models\Product;
 use Illuminate\Support\Str;
 use RuntimeException;
 
+/**
+ * Generates collision-checked product SKUs.
+ *
+ * Used by Product::booted() when no SKU is supplied. Uniqueness is
+ * best-effort (pre-check) + enforced (DB UNIQUE) — see make().
+ */
 final class SkuGenerator
 {
     private const MAX_ATTEMPTS = 10;
@@ -33,6 +39,10 @@ final class SkuGenerator
         throw new RuntimeException('Unable to generate a unique SKU after '.self::MAX_ATTEMPTS.' attempts.');
     }
 
+    /**
+     * Check for an existing SKU, including trashed rows when the model
+     * is soft-deletable, so deleted SKUs are never re-issued.
+     */
     private static function exists(string $sku): bool
     {
         $query = Product::where('sku', $sku);

@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * Append-only ledger entry for a single quantity change.
+ *
+ * Signed quantity: positive for inbound (receipt, transfer_in), negative for
+ * outbound (sale, transfer_out). reference_type/reference_id is a polymorphic
+ * pointer to the source (e.g. StockTransfer, PurchaseOrderItem, StockLevel).
+ * Rows are never edited — corrections are new adjustment rows.
+ */
 class StockMovement extends Model
 {
     use HasFactory;
@@ -39,19 +47,31 @@ class StockMovement extends Model
         'total_amount' => 'decimal:2',
     ];
 
-    /** @return BelongsTo<Product, $this> */
+    /**
+     * Movement this entry records stock for.
+     *
+     * @return BelongsTo<Product, $this>
+     */
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch where the movement happened.
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
     }
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * User who caused the movement (null for system imports).
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function createdBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');

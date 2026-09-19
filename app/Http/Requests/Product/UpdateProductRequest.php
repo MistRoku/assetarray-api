@@ -6,6 +6,10 @@ use App\Models\Product;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Product update. Partial bodies allowed; barcode uniqueness ignores this
+ * product's own row (bound model or raw id both supported).
+ */
 class UpdateProductRequest extends FormRequest
 {
     public function authorize(): bool

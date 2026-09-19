@@ -11,12 +11,24 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Stock level reads, manual adjustments and the movement ledger.
+ *
+ * Concurrency: every write locks the StockLevel row (lockForUpdate) inside
+ * a transaction, so two simultaneous adjustments can't lose updates.
+ * Every adjustment also writes a StockMovement row — the ledger is the
+ * source of truth for "why did quantity change?".
+ */
 final class InventoryService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /**
+     * Paginated stock levels with optional branch/product/search filters.
+     * low_stock=true keeps only rows below the product's min threshold.
+     */
     public function list(array $filters): LengthAwarePaginator
     {
         return StockLevel::query()
@@ -40,6 +52,17 @@ final class InventoryService
             ->paginate((int) ($filters['per_page'] ?? 15));
     }
 
+    /**
+     * Apply a signed quantity delta to a branch's stock.
+     *
+     * Negative results are rejected unless the reason mentions "correction"
+     * (explicit override for recount fixes). Drops below the product's
+     * min_stock_threshold dispatch CheckLowStockJob for notifications.
+     *
+     * @param  array{product_id: int, branch_id: int, quantity: int, reason: string}  $data
+     *
+     * @throws ValidationException On negative stock without a correction reason.
+     */
     public function adjust(array $data): StockLevel
     {
         return DB::transaction(function () use ($data) {
@@ -51,6 +74,7 @@ final class InventoryService
                 ->lockForUpdate()
                 ->first();
 
+            // Missing level = first receipt for this product/branch: start at 0.
             if (! $stock) {
                 $stock = StockLevel::create([
                     'product_id' => $product->id,
@@ -99,6 +123,10 @@ final class InventoryService
         });
     }
 
+    /**
+     * Paginated movement ledger with branch/product/type/date filters.
+     * Newest first — the natural view for "what just happened?".
+     */
     public function movements(array $filters): LengthAwarePaginator
     {
         return StockMovement::query()

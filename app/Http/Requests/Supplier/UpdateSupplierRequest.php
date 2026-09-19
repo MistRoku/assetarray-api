@@ -6,6 +6,10 @@ use App\Models\Supplier;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Supplier update. Partial bodies allowed; email uniqueness ignores this
+ * supplier's own row (bound model or raw id both supported).
+ */
 class UpdateSupplierRequest extends FormRequest
 {
     public function authorize(): bool

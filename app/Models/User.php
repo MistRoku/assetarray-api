@@ -10,6 +10,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * Application user authenticated via Sanctum tokens.
+ *
+ * Roles (super_admin > branch_manager > staff) drive policies and the
+ * isManagerOrAbove() gate used across inventory requests. The password
+ * 'hashed' cast means services must assign plain text — never Hash::make().
+ */
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -59,39 +66,55 @@ class User extends Authenticatable
         'is_active' => 'boolean',
     ];
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch the user is assigned to (managers/staff).
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
     }
 
-    /** @return HasMany<Notification, $this> */
+    /**
+     * In-app notifications for this user.
+     *
+     * @return HasMany<Notification, $this>
+     */
     public function notifications(): HasMany
     {
         return $this->hasMany(Notification::class);
     }
 
-    /** @return HasMany<AuditLog, $this> */
+    /**
+     * Audit trail entries performed by this user.
+     *
+     * @return HasMany<AuditLog, $this>
+     */
     public function auditLogs(): HasMany
     {
         return $this->hasMany(AuditLog::class);
     }
 
+    /** Full-access role: bypasses branch scoping. */
     public function isSuperAdmin(): bool
     {
         return $this->role === self::ROLE_SUPER_ADMIN;
     }
 
+    /** Manages stock for their assigned branch. */
     public function isBranchManager(): bool
     {
         return $this->role === self::ROLE_BRANCH_MANAGER;
     }
 
+    /** Read/count access; cannot approve transfers or adjust stock. */
     public function isStaff(): bool
     {
         return $this->role === self::ROLE_STAFF;
     }
 
+    /** Shared gate for write operations on inventory, POs and branches. */
     public function isManagerOrAbove(): bool
     {
         return $this->isSuperAdmin() || $this->isBranchManager();

@@ -7,12 +7,17 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Supplier CRUD. Mirrors BranchService: deactivate() flips is_active then
+ * soft-deletes so order history keeps its supplier link.
+ */
 final class SupplierService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /** Paginated suppliers with name/email/contact search. */
     public function list(array $filters): LengthAwarePaginator
     {
         return Supplier::query()
@@ -26,6 +31,7 @@ final class SupplierService
             ->paginate((int) ($filters['per_page'] ?? 15));
     }
 
+    /** Create a supplier and audit it. */
     public function create(array $data): Supplier
     {
         return DB::transaction(function () use ($data) {
@@ -42,6 +48,7 @@ final class SupplierService
         });
     }
 
+    /** Update a supplier; audits only the keys actually changed. */
     public function update(Supplier $supplier, array $data): Supplier
     {
         return DB::transaction(function () use ($supplier, $data) {
@@ -61,6 +68,7 @@ final class SupplierService
         });
     }
 
+    /** Deactivate then soft-delete; order history keeps working. */
     public function deactivate(Supplier $supplier): void
     {
         DB::transaction(function () use ($supplier) {

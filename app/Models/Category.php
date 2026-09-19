@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * Product grouping. Name and slug are globally unique.
+ */
 class Category extends Model
 {
     use HasFactory;
@@ -21,7 +24,11 @@ class Category extends Model
         'is_active' => 'boolean',
     ];
 
-    /** @return HasMany<Product, $this> */
+    /**
+     * Products in this category.
+     *
+     * @return HasMany<Product, $this>
+     */
     public function products(): HasMany
     {
         return $this->hasMany(Product::class);

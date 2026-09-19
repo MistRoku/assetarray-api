@@ -5,6 +5,11 @@ namespace App\Http\Requests\Inventory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Manual stock adjustment. Quantity is a signed delta (not_in:0 rejects
+ * no-ops); negative results need a "correction" reason — enforced in
+ * InventoryService, not here, since it depends on live stock.
+ */
 class StockAdjustmentRequest extends FormRequest
 {
     public function authorize(): bool

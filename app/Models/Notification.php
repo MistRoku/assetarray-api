@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * In-app notification for a single user.
+ *
+ * Unread = read_at null. Bulk reads use a direct update (see
+ * NotificationService::markAllRead) to avoid N model events.
+ */
 class Notification extends Model
 {
     use HasFactory;
@@ -25,13 +31,21 @@ class Notification extends Model
         'read_at' => 'datetime',
     ];
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * Recipient.
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    /** @param Builder<Notification> $query @return Builder<Notification> */
+    /**
+     * Scope to unread notifications (read_at is null).
+     *
+     * @param  Builder<Notification>  $query  @return Builder<Notification>
+     */
     public function scopeUnread(Builder $query): Builder
     {
         return $query->whereNull('read_at');

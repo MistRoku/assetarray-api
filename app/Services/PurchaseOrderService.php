@@ -13,12 +13,26 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Supplier purchase order workflow: create (draft) → send → receiveGoods
+ * (partially_received → received) or cancel().
+ *
+ * Goods can arrive in multiple batches: each receiveGoods() call increments
+ * per-line quantity_received, bumps branch stock, and writes receipt
+ * movements. total_amount is computed server-side from line items.
+ */
 final class PurchaseOrderService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /**
+     * Raise a draft PO with line items. Totals are derived, never trusted
+     * from the client.
+     *
+     * @param  array{supplier_id: int, branch_id: int, notes?: string, items: array<int, array{product_id: int, quantity_ordered: int, unit_cost: float}>}  $data
+     */
     public function create(array $data): PurchaseOrder
     {
         return DB::transaction(function () use ($data) {
@@ -61,6 +75,12 @@ final class PurchaseOrderService
         });
     }
 
+    /**
+     * Mark a draft PO as sent to the supplier. One-way for this step —
+     * a sent PO can only move forward (receive) or be cancelled.
+     *
+     * @throws ValidationException On non-draft status.
+     */
     public function send(PurchaseOrder $po): PurchaseOrder
     {
         return DB::transaction(function () use ($po) {
@@ -84,6 +104,19 @@ final class PurchaseOrderService
         });
     }
 
+    /**
+     * Book one batch of arrived goods against the PO's line items.
+     *
+     * Each line rejects over-receiving (received > ordered - received so far).
+     * After booking, the PO status is recomputed: received when every line is
+     * complete, partially_received otherwise. received_at is stamped only on
+     * full completion (and cleared again if... it can't regress — statuses
+     * only move forward, so a partial receipt after full is unreachable).
+     *
+     * @param  array{items: array<int, array{purchase_order_item_id: int, quantity_received: int}>}  $data
+     *
+     * @throws ValidationException On wrong PO status or invalid quantities.
+     */
     public function receiveGoods(PurchaseOrder $po, array $data): PurchaseOrder
     {
         return DB::transaction(function () use ($po, $data) {
@@ -179,6 +212,13 @@ final class PurchaseOrderService
         });
     }
 
+    /**
+     * Cancel a PO that hasn't been fully received. Received stock is NOT
+     * clawed back — partial receipts stay on the shelves, the PO just stops
+     * accepting more.
+     *
+     * @throws ValidationException On received/cancelled status.
+     */
     public function cancel(PurchaseOrder $po): PurchaseOrder
     {
         return DB::transaction(function () use ($po) {
@@ -204,6 +244,7 @@ final class PurchaseOrderService
         });
     }
 
+    /** Paginated POs with status/supplier/branch filters, newest first. */
     public function list(array $filters): LengthAwarePaginator
     {
         return PurchaseOrder::query()

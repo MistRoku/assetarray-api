@@ -10,12 +10,24 @@ use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * Product catalogue: filtered listing, CRUD and CSV import dispatch.
+ *
+ * stock_status filters (in_stock / low_stock / out_of_stock) are evaluated
+ * against live stock_levels, optionally scoped to one branch. The low_stock
+ * comparison uses whereRaw against products.min_stock_threshold — keep the
+ * table prefix if the join strategy changes.
+ */
 final class ProductService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /**
+     * Paginated catalogue. Pass branch_id to scope stock filters and eager
+     * loads to that branch only; otherwise stock across all branches counts.
+     */
     public function list(array $filters): LengthAwarePaginator
     {
         $branchId = $filters['branch_id'] ?? null;
@@ -59,6 +71,10 @@ final class ProductService
         return $query->paginate((int) ($filters['per_page'] ?? 15));
     }
 
+    /**
+     * Create a product (SKU auto-generated when omitted) and audit it.
+     * Returns the product with category/supplier eager-loaded for the response.
+     */
     public function create(array $data): Product
     {
         return DB::transaction(function () use ($data) {
@@ -75,6 +91,7 @@ final class ProductService
         });
     }
 
+    /** Update a product; audits only the keys actually changed. */
     public function update(Product $product, array $data): Product
     {
         return DB::transaction(function () use ($product, $data) {
@@ -94,6 +111,7 @@ final class ProductService
         });
     }
 
+    /** Soft-delete a product. The SKU stays reserved (withTrashed check). */
     public function delete(Product $product): void
     {
         DB::transaction(function () use ($product) {
@@ -108,6 +126,10 @@ final class ProductService
         });
     }
 
+    /**
+     * Price-change history, newest first. Ordered by changed_at (not
+     * created_at) — that column is the event timestamp for this table.
+     */
     public function priceHistory(Product $product)
     {
         return $product->priceHistories()
@@ -116,6 +138,11 @@ final class ProductService
             ->get();
     }
 
+    /**
+     * Store the uploaded CSV and queue it for background processing.
+     * Returns the storage path; the job (not this request) parses rows, so
+     * large files don't block the response. Tracked to the uploading user.
+     */
     public function importCsv(UploadedFile $file): string
     {
         $path = $file->store('product-imports', 'local');

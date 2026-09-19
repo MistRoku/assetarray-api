@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * One counted product line within a stock take.
+ *
+ * variance = counted_quantity - system_quantity (computed at submit time).
+ * Unique per (stock_take_id, product_id).
+ */
 class StockTakeItem extends Model
 {
     use HasFactory;
@@ -25,13 +31,21 @@ class StockTakeItem extends Model
         'variance' => 'integer',
     ];
 
-    /** @return BelongsTo<StockTake, $this> */
+    /**
+     * Parent count session.
+     *
+     * @return BelongsTo<StockTake, $this>
+     */
     public function stockTake(): BelongsTo
     {
         return $this->belongsTo(StockTake::class);
     }
 
-    /** @return BelongsTo<Product, $this> */
+    /**
+     * Product counted on this line.
+     *
+     * @return BelongsTo<Product, $this>
+     */
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

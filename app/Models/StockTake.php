@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * Physical inventory count session for a branch.
+ *
+ * Lifecycle: open → submitted → approved (or cancelled). Approval writes the
+ * counted quantities back to stock levels and emits adjustment movements.
+ * See StockTakeService.
+ */
 class StockTake extends Model
 {
     use HasFactory;
@@ -42,19 +49,31 @@ class StockTake extends Model
         });
     }
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch being counted.
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
     }
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * User who started the count.
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function creator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
     }
 
-    /** @return HasMany<StockTakeItem, $this> */
+    /**
+     * Per-product count lines with system vs counted quantities.
+     *
+     * @return HasMany<StockTakeItem, $this>
+     */
     public function items(): HasMany
     {
         return $this->hasMany(StockTakeItem::class);

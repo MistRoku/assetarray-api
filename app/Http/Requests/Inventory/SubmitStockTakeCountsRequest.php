@@ -5,6 +5,10 @@ namespace App\Http\Requests\Inventory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Count submission. Any authenticated user may count (staff do the walking);
+ * approval stays manager-only in StockTakeService. At least one line required.
+ */
 class SubmitStockTakeCountsRequest extends FormRequest
 {
     public function authorize(): bool

@@ -9,12 +9,19 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Branch CRUD plus manager assignment.
+ *
+ * Deactivation is two-step (is_active=false + soft delete) so the branch
+ * disappears from active scopes while its history stays queryable.
+ */
 final class BranchService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /** Paginated branches with search + active-state filters. */
     public function list(array $filters): LengthAwarePaginator
     {
         return Branch::query()
@@ -31,6 +38,7 @@ final class BranchService
             ->paginate((int) ($filters['per_page'] ?? 15));
     }
 
+    /** Create a branch and audit it. Validation lives in StoreBranchRequest. */
     public function create(array $data): Branch
     {
         return DB::transaction(function () use ($data) {
@@ -47,6 +55,10 @@ final class BranchService
         });
     }
 
+    /**
+     * Update a branch. Only the changed keys are snapshotted for the audit
+     * row, keeping old/new values small and relevant.
+     */
     public function update(Branch $branch, array $data): Branch
     {
         return DB::transaction(function () use ($branch, $data) {
@@ -66,6 +78,10 @@ final class BranchService
         });
     }
 
+    /**
+     * Deactivate then soft-delete. The is_active flag hides the branch from
+     * active scopes immediately; the soft delete preserves FK history.
+     */
     public function deactivate(Branch $branch): void
     {
         DB::transaction(function () use ($branch) {
@@ -81,6 +97,13 @@ final class BranchService
         });
     }
 
+    /**
+     * Point a branch_manager user at this branch. Role is re-checked here
+     * (defence in depth — the request already validates it) so a role
+     * changed between validation and execution can't slip through.
+     *
+     * @throws ValidationException When the user is not a branch manager.
+     */
     public function assignManager(Branch $branch, int $userId): User
     {
         return DB::transaction(function () use ($branch, $userId) {

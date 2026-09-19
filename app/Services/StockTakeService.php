@@ -12,12 +12,27 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Physical count workflow: start (open) → submitCounts (submitted) →
+ * approve (writes counts into stock + adjustment movements).
+ *
+ * system_quantity is snapshotted per line at submit time so the variance
+ * always reflects "what the system said when you counted", even if stock
+ * moved concurrently. Approval re-reads live stock under lock and writes
+ * the difference as an adjustment movement per product.
+ */
 final class StockTakeService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /**
+     * Open a count session, optionally pre-seeding lines for given products
+     * with their current system quantities.
+     *
+     * @param  array{branch_id: int, notes?: string, product_ids?: array<int, int>}  $data
+     */
     public function start(array $data): StockTake
     {
         return DB::transaction(function () use ($data) {
@@ -55,6 +70,16 @@ final class StockTakeService
         });
     }
 
+    /**
+     * Record (or re-record) counted quantities. Upserts per product so recounts
+     * overwrite earlier submissions; re-submitting from SUBMITTED back to
+     * SUBMITTED is allowed for corrections. Stock levels are untouched here —
+     * approve() is the only writer.
+     *
+     * @param  array{items: array<int, array{product_id: int, counted_quantity: int, note?: string}>}  $data
+     *
+     * @throws ValidationException When the take is approved/cancelled.
+     */
     public function submitCounts(StockTake $stockTake, array $data): StockTake
     {
         return DB::transaction(function () use ($stockTake, $data) {
@@ -102,6 +127,13 @@ final class StockTakeService
         });
     }
 
+    /**
+     * Apply the submitted counts to live stock. Lines without a counted
+     * quantity and zero-difference lines are skipped (no noise movements).
+     * Terminal: stamps completed_at and flips to APPROVED.
+     *
+     * @throws ValidationException On non-submitted status.
+     */
     public function approve(StockTake $stockTake): StockTake
     {
         return DB::transaction(function () use ($stockTake) {
@@ -111,7 +143,9 @@ final class StockTakeService
                 ]);
             }
 
-            // FIX: lazy-load items if relation not already loaded.
+            // Query items fresh instead of $stockTake->items: the relation may
+            // not be eager-loaded on the passed model, which would silently
+            // approve zero lines.
             foreach ($stockTake->items()->get() as $item) {
                 if ($item->counted_quantity === null) {
                     continue;
@@ -169,6 +203,10 @@ final class StockTakeService
         });
     }
 
+    /**
+     * Read-only per-product variance breakdown for review screens/exports.
+     * Nullsafe product access: a deleted product still shows its quantities.
+     */
     public function varianceReport(StockTake $stockTake)
     {
         return $stockTake->items()
@@ -185,6 +223,7 @@ final class StockTakeService
             ]);
     }
 
+    /** Paginated stock takes with branch/status filters, newest first. */
     public function list(array $filters): LengthAwarePaginator
     {
         return StockTake::query()

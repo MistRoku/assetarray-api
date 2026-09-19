@@ -6,6 +6,10 @@ use App\Models\Branch;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Branch update. Partial bodies allowed; code uniqueness ignores the branch
+ * being edited (works with both bound models and raw route ids).
+ */
 class UpdateBranchRequest extends FormRequest
 {
     public function authorize(): bool

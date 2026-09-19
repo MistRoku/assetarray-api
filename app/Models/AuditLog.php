@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use RuntimeException;
 
+/**
+ * Immutable audit trail row for entity creates/updates/deletes.
+ *
+ * Timestamps are managed manually (single created_at) and updates/deletes
+ * throw — history can only ever be appended. Write via AuditLogService.
+ */
 class AuditLog extends Model
 {
     use HasFactory;
@@ -30,12 +36,20 @@ class AuditLog extends Model
         'created_at' => 'datetime',
     ];
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * Actor (null for system/queue actions).
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    /**
+     * Enforce append-only semantics at the model layer.
+     * Even admins cannot rewrite history through Eloquent.
+     */
     protected static function booted(): void
     {
         static::updating(function (): void {

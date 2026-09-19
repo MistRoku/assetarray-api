@@ -5,6 +5,11 @@ namespace App\Http\Requests\Inventory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Transfer request validation. different:from_branch_id rejects self-
+ * transfers at the boundary; stock sufficiency is checked under lock in
+ * TransferService (live data, not validation data).
+ */
 class CreateTransferRequest extends FormRequest
 {
     public function authorize(): bool

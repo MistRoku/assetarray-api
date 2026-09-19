@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
+/**
+ * Supplier restock order for a branch.
+ *
+ * Lifecycle: draft → sent → partially_received → received (or cancelled).
+ * Receiving is incremental per line item — see PurchaseOrderService.
+ * The po_number is auto-generated on create when left blank.
+ */
 class PurchaseOrder extends Model
 {
     use HasFactory;
@@ -49,25 +56,41 @@ class PurchaseOrder extends Model
         });
     }
 
-    /** @return BelongsTo<Supplier, $this> */
+    /**
+     * Supplier fulfilling the order.
+     *
+     * @return BelongsTo<Supplier, $this>
+     */
     public function supplier(): BelongsTo
     {
         return $this->belongsTo(Supplier::class);
     }
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch receiving the goods.
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
     }
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * User who raised the order.
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function orderedBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'ordered_by');
     }
 
-    /** @return HasMany<PurchaseOrderItem, $this> */
+    /**
+     * Line items; each tracks ordered vs received quantities.
+     *
+     * @return HasMany<PurchaseOrderItem, $this>
+     */
     public function items(): HasMany
     {
         return $this->hasMany(PurchaseOrderItem::class);

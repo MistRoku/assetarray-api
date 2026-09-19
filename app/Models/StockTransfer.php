@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * Branch-to-branch stock movement request.
+ *
+ * Lifecycle: pending → approved → received (or rejected). Source stock is
+ * decremented at approval, destination incremented at receipt — never both
+ * at once, so in-flight quantity is never double-counted. See TransferService.
+ */
 class StockTransfer extends Model
 {
     use HasFactory;
@@ -48,31 +55,51 @@ class StockTransfer extends Model
         });
     }
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch losing the stock.
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function fromBranch(): BelongsTo
     {
         return $this->belongsTo(Branch::class, 'from_branch_id');
     }
 
-    /** @return BelongsTo<Branch, $this> */
+    /**
+     * Branch gaining the stock.
+     *
+     * @return BelongsTo<Branch, $this>
+     */
     public function toBranch(): BelongsTo
     {
         return $this->belongsTo(Branch::class, 'to_branch_id');
     }
 
-    /** @return BelongsTo<Product, $this> */
+    /**
+     * Product being moved.
+     *
+     * @return BelongsTo<Product, $this>
+     */
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
     }
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * User who requested the transfer.
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function requestedBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'requested_by');
     }
 
-    /** @return BelongsTo<User, $this> */
+    /**
+     * User who approved it (null until approved).
+     *
+     * @return BelongsTo<User, $this>
+     */
     public function approvedBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'approved_by');

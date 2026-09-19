@@ -4,6 +4,10 @@ namespace App\Http\Requests\Auth;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Password-reset validation. 'confirmed' requires a matching
+ * password_confirmation field from the client.
+ */
 class ResetPasswordRequest extends FormRequest
 {
     public function authorize(): bool

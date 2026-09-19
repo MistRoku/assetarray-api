@@ -5,6 +5,10 @@ namespace App\Http\Requests\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Self-service profile update. 'sometimes' rules allow partial PATCH-style
+ * bodies; email uniqueness ignores the caller's own row.
+ */
 class UpdateProfileRequest extends FormRequest
 {
     public function authorize(): bool

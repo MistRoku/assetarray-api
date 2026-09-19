@@ -9,6 +9,13 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
+/**
+ * Queued follow-up after a stock write drops a product below its threshold.
+ *
+ * Dispatched by InventoryService::adjust(). Runs async so the HTTP response
+ * isn't delayed by notification fan-out. Recipients come from
+ * StockAlertService::recipients().
+ */
 class CheckLowStockJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;

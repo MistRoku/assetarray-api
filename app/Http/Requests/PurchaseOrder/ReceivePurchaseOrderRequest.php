@@ -5,6 +5,10 @@ namespace App\Http\Requests\PurchaseOrder;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Goods receipt batch. Line ids must exist; over-receiving beyond the
+ * remaining ordered quantity is rejected per line in PurchaseOrderService.
+ */
 class ReceivePurchaseOrderRequest extends FormRequest
 {
     public function authorize(): bool

@@ -5,6 +5,10 @@ namespace App\Policies;
 use App\Models\Product;
 use App\Models\User;
 
+/**
+ * Product authorization. Catalogue writes and bulk CSV import are
+ * manager-level: staff get read/count access only.
+ */
 class ProductPolicy
 {
     public function create(User $user): bool

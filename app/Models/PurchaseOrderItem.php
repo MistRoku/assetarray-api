@@ -6,6 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * One ordered product line within a purchase order.
+ *
+ * quantity_received grows incrementally via receiveGoods() until it equals
+ * quantity_ordered; over-receiving is rejected per line.
+ */
 class PurchaseOrderItem extends Model
 {
     use HasFactory;
@@ -24,13 +30,21 @@ class PurchaseOrderItem extends Model
         'unit_cost' => 'decimal:2',
     ];
 
-    /** @return BelongsTo<PurchaseOrder, $this> */
+    /**
+     * Parent order.
+     *
+     * @return BelongsTo<PurchaseOrder, $this>
+     */
     public function purchaseOrder(): BelongsTo
     {
         return $this->belongsTo(PurchaseOrder::class);
     }
 
-    /** @return BelongsTo<Product, $this> */
+    /**
+     * Product ordered on this line.
+     *
+     * @return BelongsTo<Product, $this>
+     */
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

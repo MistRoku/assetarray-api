@@ -6,6 +6,10 @@ use App\Models\Branch;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Branch creation. Code uniqueness excludes trashed rows (Branch is
+ * soft-deletable). is_active defaults to true only when omitted.
+ */
 class StoreBranchRequest extends FormRequest
 {
     public function authorize(): bool

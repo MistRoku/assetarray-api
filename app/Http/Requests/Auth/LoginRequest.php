@@ -4,6 +4,10 @@ namespace App\Http\Requests\Auth;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Login validation. Public endpoint — no auth check here; AuthService
+ * returns a generic error so responses never reveal which emails exist.
+ */
 class LoginRequest extends FormRequest
 {
     public function authorize(): bool

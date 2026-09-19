@@ -10,6 +10,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * A sellable inventory item.
+ *
+ * The SKU is auto-generated on create (see booted()) when left blank, and
+ * is globally unique including soft-deleted rows so SKUs are never recycled.
+ * Prices use decimal:2 casts — never floats — to avoid rounding drift.
+ */
 class Product extends Model
 {
     use HasFactory;
@@ -38,6 +45,10 @@ class Product extends Model
         'is_active' => 'boolean',
     ];
 
+    /**
+     * Auto-fill the SKU so callers never have to invent one.
+     * Explicitly provided SKUs are left untouched.
+     */
     protected static function booted(): void
     {
         static::creating(function (Product $product): void {
@@ -47,43 +58,72 @@ class Product extends Model
         });
     }
 
-    /** @return BelongsTo<Category, $this> */
+    /**
+     * Owning category.
+     *
+     * @return BelongsTo<Category, $this>
+     */
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
-    /** @return BelongsTo<Supplier, $this> */
+    /**
+     * Preferred supplier (nullable).
+     *
+     * @return BelongsTo<Supplier, $this>
+     */
     public function supplier(): BelongsTo
     {
         return $this->belongsTo(Supplier::class);
     }
 
-    /** @return HasMany<StockLevel, $this> */
+    /**
+     * Per-branch quantities for this product.
+     *
+     * @return HasMany<StockLevel, $this>
+     */
     public function stockLevels(): HasMany
     {
         return $this->hasMany(StockLevel::class);
     }
 
-    /** @return HasMany<StockMovement, $this> */
+    /**
+     * Ledger of every quantity change (receipts, sales, adjustments, transfers).
+     *
+     * @return HasMany<StockMovement, $this>
+     */
     public function stockMovements(): HasMany
     {
         return $this->hasMany(StockMovement::class);
     }
 
-    /** @return HasMany<ProductPriceHistory, $this> */
+    /**
+     * Historical cost/selling price changes.
+     *
+     * @return HasMany<ProductPriceHistory, $this>
+     */
     public function priceHistories(): HasMany
     {
         return $this->hasMany(ProductPriceHistory::class);
     }
 
-    /** @return HasMany<PurchaseOrderItem, $this> */
+    /**
+     * Purchase-order line items referencing this product.
+     *
+     * @return HasMany<PurchaseOrderItem, $this>
+     */
     public function purchaseOrderItems(): HasMany
     {
         return $this->hasMany(PurchaseOrderItem::class);
     }
 
-    /** @param Builder<Product> $query @return Builder<Product> */
+    /**
+     * Free-text search across name and SKU.
+     * Blank term returns the query untouched so the filter is optional.
+     *
+     * @param  Builder<Product>  $query  @return Builder<Product>
+     */
     public function scopeSearch(Builder $query, ?string $term): Builder
     {
         if (! $term) {
@@ -96,7 +136,11 @@ class Product extends Model
         });
     }
 
-    /** @param Builder<Product> $query @return Builder<Product> */
+    /**
+     * Scope to sellable (active) products.
+     *
+     * @param  Builder<Product>  $query  @return Builder<Product>
+     */
     public function scopeActive(Builder $query): Builder
     {
         return $query->where('is_active', true);

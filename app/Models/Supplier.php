@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Goods supplier. Soft-deleted so purchase-order history keeps its source.
+ */
 class Supplier extends Model
 {
     use HasFactory;
@@ -25,13 +28,21 @@ class Supplier extends Model
         'is_active' => 'boolean',
     ];
 
-    /** @return HasMany<Product, $this> */
+    /**
+     * Products preferred-sourced from this supplier.
+     *
+     * @return HasMany<Product, $this>
+     */
     public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }
 
-    /** @return HasMany<PurchaseOrder, $this> */
+    /**
+     * Orders placed with this supplier.
+     *
+     * @return HasMany<PurchaseOrder, $this>
+     */
     public function purchaseOrders(): HasMany
     {
         return $this->hasMany(PurchaseOrder::class);

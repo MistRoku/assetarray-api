@@ -5,6 +5,10 @@ namespace App\Http\Requests\Inventory;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Open a count session. product_ids optionally pre-seeds count lines;
+ * omitted entirely means "count everything later via submitCounts".
+ */
 class StartStockTakeRequest extends FormRequest
 {
     public function authorize(): bool

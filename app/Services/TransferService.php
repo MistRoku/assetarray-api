@@ -12,12 +12,28 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 
+/**
+ * Branch-to-branch transfer workflow: create → approve → receive (or reject).
+ *
+ * Stock moves in two phases so in-transit quantity is never double-counted:
+ * approve() decrements the source, receive() increments the destination.
+ * Each phase writes its own StockMovement row. Rows are locked (lockForUpdate)
+ * so approval can't oversell stock that changed since the request.
+ */
 final class TransferService
 {
     public function __construct(
         private readonly AuditLogService $auditLogService
     ) {}
 
+    /**
+     * Request a transfer. Reserves nothing yet — source stock is only
+     * re-checked and decremented at approve() time.
+     *
+     * @param  array{product_id: int, from_branch_id: int, to_branch_id: int, quantity: int}  $data
+     *
+     * @throws ValidationException On same-branch, non-positive quantity or insufficient stock.
+     */
     public function create(array $data): StockTransfer
     {
         return DB::transaction(function () use ($data) {
@@ -68,6 +84,13 @@ final class TransferService
         });
     }
 
+    /**
+     * Approve a pending transfer and decrement the source branch.
+     * Rejects when source stock dropped below the requested quantity
+     * after the request was created (checked under row lock).
+     *
+     * @throws ValidationException On non-pending status or insufficient stock.
+     */
     public function approve(StockTransfer $transfer): StockTransfer
     {
         return DB::transaction(function () use ($transfer) {
@@ -119,6 +142,11 @@ final class TransferService
         });
     }
 
+    /**
+     * Reject a pending transfer. No stock moves — terminal state.
+     *
+     * @throws ValidationException On non-pending status.
+     */
     public function reject(StockTransfer $transfer, string $reason): StockTransfer
     {
         return DB::transaction(function () use ($transfer, $reason) {
@@ -145,6 +173,12 @@ final class TransferService
         });
     }
 
+    /**
+     * Receive an approved transfer: increment the destination branch and
+     * close the transfer. Creates the destination StockLevel on first receipt.
+     *
+     * @throws ValidationException On non-approved status.
+     */
     public function receive(StockTransfer $transfer): StockTransfer
     {
         return DB::transaction(function () use ($transfer) {
@@ -198,6 +232,7 @@ final class TransferService
         });
     }
 
+    /** Paginated transfers with status/branch/date filters, newest first. */
     public function list(array $filters): LengthAwarePaginator
     {
         return StockTransfer::query()

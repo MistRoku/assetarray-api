@@ -6,6 +6,10 @@ use App\Models\Supplier;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+/**
+ * Supplier creation. Email uniqueness excludes trashed rows; is_active
+ * defaults to true only when omitted.
+ */
 class StoreSupplierRequest extends FormRequest
 {
     public function authorize(): bool
