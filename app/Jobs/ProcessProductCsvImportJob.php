@@ -54,7 +54,9 @@ class ProcessProductCsvImportJob implements ShouldQueue
         }
 
         try {
-            $csv = Reader::createFromStream($stream);
+            // from() accepts the stream resource directly (createFromStream
+            // is deprecated since league/csv 9.27) — still fully streamed.
+            $csv = Reader::from($stream);
             $csv->setHeaderOffset(0);
 
             if (! in_array('name', $csv->getHeader(), true)) {

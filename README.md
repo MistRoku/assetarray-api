@@ -7,6 +7,7 @@ Production-grade Laravel 13 REST API for multi-branch asset and inventory manage
 ![Database](https://img.shields.io/badge/DB-SQLite%20%7C%20MySQL-4479A1)
 ![Tests](https://img.shields.io/badge/tests-PHPUnit-67A938)
 ![Docs](https://img.shields.io/badge/docs-Scribe-orange)
+![CI](https://github.com/yourusername/assetarray-api/actions/workflows/ci.yml/badge.svg)
 
 ## Purpose
 

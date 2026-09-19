@@ -364,7 +364,7 @@ endpoints:
         name: is_active
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -381,7 +381,7 @@ endpoints:
       barcode: m
       image_url: 'https://www.gulgowski.com/nihil-accusantium-harum-mollitia-modi-deserunt'
       min_stock_threshold: 87
-      is_active: true
+      is_active: false
     fileParameters: []
     responses: []
     responseFields: []

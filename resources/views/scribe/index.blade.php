@@ -4140,7 +4140,7 @@ name, category, description, cost_price, selling_price, min_stock_threshold, bar
     --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "file=@C:\Users\thabangm\AppData\Local\Temp\php7267.tmp" </code></pre></div>
+    --form "file=@C:\Users\thabangm\AppData\Local\Temp\phpC9F8.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -4261,7 +4261,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 10240 kilobytes. Example: <code>C:\Users\thabangm\AppData\Local\Temp\php7267.tmp</code></p>
+<p>Must be a file. Must not be greater than 10240 kilobytes. Example: <code>C:\Users\thabangm\AppData\Local\Temp\phpC9F8.tmp</code></p>
         </div>
         </form>
 
@@ -4663,7 +4663,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"barcode\": \"m\",
     \"image_url\": \"https:\\/\\/www.gulgowski.com\\/nihil-accusantium-harum-mollitia-modi-deserunt\",
     \"min_stock_threshold\": 87,
-    \"is_active\": true
+    \"is_active\": false
 }"
 </code></pre></div>
 
@@ -4690,7 +4690,7 @@ let body = {
     "barcode": "m",
     "image_url": "https:\/\/www.gulgowski.com\/nihil-accusantium-harum-mollitia-modi-deserunt",
     "min_stock_threshold": 87,
-    "is_active": true
+    "is_active": false
 };
 
 fetch(url, {
@@ -4927,7 +4927,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
         </form>
 
