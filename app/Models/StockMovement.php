@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Observers\StockMovementObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,9 +15,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * outbound (sale, transfer_out). reference_type/reference_id is a polymorphic
  * pointer to the source (e.g. StockTransfer, PurchaseOrderItem, StockLevel).
  * Rows are never edited — corrections are new adjustment rows.
+ * Enforced by StockMovementObserver.
  *
  * @mixin IdeHelperStockMovement
  */
+#[ObservedBy(StockMovementObserver::class)]
 class StockMovement extends Model
 {
     use HasFactory;

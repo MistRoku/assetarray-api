@@ -73,6 +73,16 @@ return [
             'replace_placeholders' => true,
         ],
 
+        // Access log written by LogApiRequest middleware. NOTE: this file
+        // uses `max_files` (not `days`) for rotation on this Laravel version.
+        'api' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/api.log'),
+            'level' => env('LOG_LEVEL', 'debug'),
+            'max_files' => 14,
+            'replace_placeholders' => true,
+        ],
+
         'monthly' => [
             'driver' => 'monthly',
             'path' => storage_path('logs/laravel.log'),

@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Observers\ProductObserver;
 use App\Support\SkuGenerator;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,9 +18,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * The SKU is auto-generated on create (see booted()) when left blank, and
  * is globally unique including soft-deleted rows so SKUs are never recycled.
  * Prices use decimal:2 casts — never floats — to avoid rounding drift.
+ * Price changes are journaled by ProductObserver.
  *
  * @mixin IdeHelperProduct
  */
+#[ObservedBy(ProductObserver::class)]
 class Product extends Model
 {
     use HasFactory;

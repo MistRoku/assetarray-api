@@ -2,19 +2,22 @@
 
 namespace App\Models;
 
+use App\Observers\AuditLogObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use RuntimeException;
 
 /**
  * Immutable audit trail row for entity creates/updates/deletes.
  *
- * Timestamps are managed manually (single created_at) and updates/deletes
- * throw — history can only ever be appended. Write via AuditLogService.
+ * Timestamps are managed manually (single created_at). Immutability is
+ * enforced by AuditLogObserver — history can only ever be appended.
+ * Write via AuditLogService.
  *
  * @mixin IdeHelperAuditLog
  */
+#[ObservedBy(AuditLogObserver::class)]
 class AuditLog extends Model
 {
     use HasFactory;
@@ -46,20 +49,5 @@ class AuditLog extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
-    }
-
-    /**
-     * Enforce append-only semantics at the model layer.
-     * Even admins cannot rewrite history through Eloquent.
-     */
-    protected static function booted(): void
-    {
-        static::updating(function (): void {
-            throw new RuntimeException('Audit logs are immutable and cannot be updated.');
-        });
-
-        static::deleting(function (): void {
-            throw new RuntimeException('Audit logs are immutable and cannot be deleted.');
-        });
     }
 }

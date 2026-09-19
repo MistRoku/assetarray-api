@@ -30,6 +30,8 @@ final class StockAlertService
     /**
      * Alert recipients for a product at a branch: active super-admins and
      * the active manager of that branch only. Inactive users never qualify.
+     *
+     * @return Collection<int, User>
      */
     public function recipients(Product $product, int $branchId): Collection
     {
