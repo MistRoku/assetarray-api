@@ -13,7 +13,7 @@ final class StockTakeReferenceGenerator
     public static function make(): string
     {
         do {
-            $reference = 'STK-'.now()->format('Ymd').'-'.Str::upper(Str::random(4));
+            $reference = 'STK-'. now()->format('Ymd'). '-'. Str::upper(Str::random(4));
         } while (StockTake::where('reference', $reference)->exists());
 
         return $reference;

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\TransferCodeGenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -37,6 +38,15 @@ class StockTransfer extends Model
         'quantity' => 'integer',
         'transferred_at' => 'datetime',
     ];
+
+    protected static function booted(): void
+    {
+        static::creating(function (StockTransfer $transfer): void {
+            if (blank($transfer->transfer_code)) {
+                $transfer->transfer_code = TransferCodeGenerator::make();
+            }
+        });
+    }
 
     public function fromBranch(): BelongsTo
     {

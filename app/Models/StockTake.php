@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\StockTakeReferenceGenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -31,6 +32,15 @@ class StockTake extends Model
     protected $casts = [
         'completed_at' => 'datetime',
     ];
+
+    protected static function booted(): void
+    {
+        static::creating(function (StockTake $take): void {
+            if (blank($take->reference)) {
+                $take->reference = StockTakeReferenceGenerator::make();
+            }
+        });
+    }
 
     public function branch(): BelongsTo
     {

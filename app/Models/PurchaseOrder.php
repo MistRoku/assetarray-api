@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\PurchaseOrderNumberGenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -38,6 +39,15 @@ class PurchaseOrder extends Model
         'ordered_at' => 'datetime',
         'received_at' => 'datetime',
     ];
+
+    protected static function booted(): void
+    {
+        static::creating(function (PurchaseOrder $order): void {
+            if (blank($order->po_number)) {
+                $order->po_number = PurchaseOrderNumberGenerator::make();
+            }
+        });
+    }
 
     public function supplier(): BelongsTo
     {
