@@ -29,6 +29,8 @@ class AuthController extends Controller
      * Authenticate using email and password, then return a Sanctum token.
      * Failures are deliberately generic (see AuthService).
      *
+     * @unauthenticated
+     *
      * @bodyParam email string required The user email. Example: manager@assetarray.test
      * @bodyParam password string required The user password. Example: password
      */
@@ -84,6 +86,8 @@ class AuthController extends Controller
      *
      * Sends a password reset link via the configured broker.
      *
+     * @unauthenticated
+     *
      * @bodyParam email string required The user email. Example: manager@assetarray.test
      */
     public function forgotPassword(ForgotPasswordRequest $request): JsonResponse
@@ -99,6 +103,8 @@ class AuthController extends Controller
      * Reset password
      *
      * Consumes the reset token and sets the new password.
+     *
+     * @unauthenticated
      *
      * @bodyParam token string required Reset token.
      * @bodyParam email string required User email.

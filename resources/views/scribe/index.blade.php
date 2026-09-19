@@ -314,6 +314,213 @@
                             </li>
                                                                         </ul>
                             </ul>
+                    <ul id="tocify-header-introduction" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="introduction">
+                    <a href="#introduction">Introduction</a>
+                </li>
+                                    <ul id="tocify-subheader-introduction" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="base-url">
+                                <a href="#base-url">Base URL</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authentication">
+                                <a href="#authentication">Authentication</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="key-modules">
+                                <a href="#key-modules">Key Modules</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="purpose">
+                                <a href="#purpose">Purpose</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-authentication-flow" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="authentication-flow">
+                    <a href="#authentication-flow">Authentication Flow</a>
+                </li>
+                                    <ul id="tocify-subheader-authentication-flow" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="login">
+                                <a href="#login">Login</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="use-token">
+                                <a href="#use-token">Use Token</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="logout">
+                                <a href="#logout">Logout</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="refresh-token">
+                                <a href="#refresh-token">Refresh Token</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="current-profile">
+                                <a href="#current-profile">Current Profile</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="forgot-reset-password">
+                                <a href="#forgot-reset-password">Forgot / Reset Password</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-roles-and-permissions" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="roles-and-permissions">
+                    <a href="#roles-and-permissions">Roles and Permissions</a>
+                </li>
+                                    <ul id="tocify-subheader-roles-and-permissions" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="deactivated-accounts">
+                                <a href="#deactivated-accounts">Deactivated Accounts</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="authorisation-strategy">
+                                <a href="#authorisation-strategy">Authorisation Strategy</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-product-lifecycle" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="product-lifecycle">
+                    <a href="#product-lifecycle">Product Lifecycle</a>
+                </li>
+                                    <ul id="tocify-subheader-product-lifecycle" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="create-product">
+                                <a href="#create-product">Create Product</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="show-product">
+                                <a href="#show-product">Show Product</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="update-product">
+                                <a href="#update-product">Update Product</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="soft-delete-product">
+                                <a href="#soft-delete-product">Soft Delete Product</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="price-history">
+                                <a href="#price-history">Price History</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="csv-import">
+                                <a href="#csv-import">CSV Import</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-inventory-workflow" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="inventory-workflow">
+                    <a href="#inventory-workflow">Inventory Workflow</a>
+                </li>
+                                    <ul id="tocify-subheader-inventory-workflow" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="stock-adjustment">
+                                <a href="#stock-adjustment">Stock Adjustment</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="movement-history">
+                                <a href="#movement-history">Movement History</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-transfer-workflow" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="transfer-workflow">
+                    <a href="#transfer-workflow">Transfer Workflow</a>
+                </li>
+                                    <ul id="tocify-subheader-transfer-workflow" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="states">
+                                <a href="#states">States</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="create-transfer">
+                                <a href="#create-transfer">Create Transfer</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="approve-transfer">
+                                <a href="#approve-transfer">Approve Transfer</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="receive-transfer">
+                                <a href="#receive-transfer">Receive Transfer</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="reject-transfer">
+                                <a href="#reject-transfer">Reject Transfer</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-stock-take-workflow" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="stock-take-workflow">
+                    <a href="#stock-take-workflow">Stock Take Workflow</a>
+                </li>
+                                    <ul id="tocify-subheader-stock-take-workflow" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="states">
+                                <a href="#states">States</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="start-stock-take">
+                                <a href="#start-stock-take">Start Stock Take</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="submit-counts">
+                                <a href="#submit-counts">Submit Counts</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="approve-stock-take">
+                                <a href="#approve-stock-take">Approve Stock Take</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="variance-report">
+                                <a href="#variance-report">Variance Report</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-purchase-order-workflow" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="purchase-order-workflow">
+                    <a href="#purchase-order-workflow">Purchase Order Workflow</a>
+                </li>
+                                    <ul id="tocify-subheader-purchase-order-workflow" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="states">
+                                <a href="#states">States</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="create-po">
+                                <a href="#create-po">Create PO</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="show-po">
+                                <a href="#show-po">Show PO</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="send-po">
+                                <a href="#send-po">Send PO</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="receive-goods">
+                                <a href="#receive-goods">Receive Goods</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="cancel-po">
+                                <a href="#cancel-po">Cancel PO</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-reporting-guide" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="reporting-guide">
+                    <a href="#reporting-guide">Reporting Guide</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-notification-system" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="notification-system">
+                    <a href="#notification-system">Notification System</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-audit-trail" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="audit-trail">
+                    <a href="#audit-trail">Audit Trail</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-error-handling" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="error-handling">
+                    <a href="#error-handling">Error Handling</a>
+                </li>
+                            </ul>
+                    <ul id="tocify-header-csv-import-and-export" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="csv-import-and-export">
+                    <a href="#csv-import-and-export">CSV Import and Export</a>
+                </li>
+                                    <ul id="tocify-subheader-csv-import-and-export" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="product-import">
+                                <a href="#product-import">Product Import</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="report-export">
+                                <a href="#report-export">Report Export</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-changelog" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="changelog">
+                    <a href="#changelog">Changelog</a>
+                </li>
+                                    <ul id="tocify-subheader-changelog" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="100-2026-09-19">
+                                <a href="#100-2026-09-19">1.0.0 — 2026-09-19</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
             </div>
 
     <ul class="toc-footer" id="toc-footer">
@@ -345,7 +552,9 @@ As you scroll, you'll see code examples for working with the API in different pr
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is not authenticated.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_TOKEN}"</code></strong>.</p>
+<p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
+<p>Grab a token via <b>POST /api/v1/auth/login</b> (demo: manager@assetarray.test / password). Deactivated accounts get <b>403</b> on every call.</p>
 
         <h1 id="audit-logs">Audit Logs</h1>
 
@@ -355,6 +564,7 @@ contain before/after snapshots that may include sensitive values.</p>
                                 <h2 id="audit-logs-GETapi-v1-audit-logs">List audit logs</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Newest first. All filters are optional and combine with AND.</p>
@@ -366,6 +576,7 @@ contain before/after snapshots that may include sensitive values.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/audit-logs?entity_type=App%5CModels%5CProduct&amp;entity_id=1&amp;user_id=1&amp;from=2026-01-01&amp;to=2026-12-31" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -386,6 +597,7 @@ Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -433,7 +645,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-audit-logs" data-method="GET"
       data-path="api/v1/audit-logs"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -463,6 +675,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/audit-logs</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-audit-logs"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -1010,6 +1234,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="authentication-POSTapi-v1-auth-logout">Logout</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Revokes only the token used for this request — other devices stay signed in.</p>
@@ -1021,6 +1246,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/auth/logout" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1031,6 +1257,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1062,7 +1289,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-auth-logout" data-method="POST"
       data-path="api/v1/auth/logout"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1093,6 +1320,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-auth-logout"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1121,6 +1360,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="authentication-POSTapi-v1-auth-refresh">Refresh token</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Deletes the current token and issues a new one. The client must
@@ -1133,6 +1373,7 @@ discard the old token — it stops working immediately.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/auth/refresh" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1143,6 +1384,7 @@ discard the old token — it stops working immediately.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1174,7 +1416,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-auth-refresh" data-method="POST"
       data-path="api/v1/auth/refresh"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1205,6 +1447,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-auth-refresh"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1233,6 +1487,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="authentication-GETapi-v1-auth-profile">Get current user profile</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Includes the assigned branch (when the user has one).</p>
@@ -1244,6 +1499,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/auth/profile" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1254,6 +1510,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1301,7 +1558,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-auth-profile" data-method="GET"
       data-path="api/v1/auth/profile"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1332,6 +1589,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-auth-profile"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -1360,6 +1629,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="authentication-PUTapi-v1-auth-profile">Update current user profile</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Partial updates allowed. NOTE: the password is assigned plain-text on
@@ -1373,6 +1643,7 @@ Hash::make() here would double-hash and lock the user out.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/auth/profile" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1389,6 +1660,7 @@ Hash::make() here would double-hash and lock the user out.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1426,7 +1698,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-auth-profile" data-method="PUT"
       data-path="api/v1/auth/profile"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1460,6 +1732,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/auth/profile</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-auth-profile"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -1531,6 +1815,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="branches-POSTapi-v1-branches--branch_id--manager">Assign manager to branch</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Returns both sides of the assignment. The manager is wrapped in
@@ -1543,6 +1828,7 @@ UserResource (never a bare model) so no internal fields leak.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/branches/1/manager" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1557,6 +1843,7 @@ UserResource (never a bare model) so no internal fields leak.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1592,7 +1879,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-branches--branch_id--manager" data-method="POST"
       data-path="api/v1/branches/{branch_id}/manager"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1622,6 +1909,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/branches/{branch_id}/manager</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-branches--branch_id--manager"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -1677,6 +1976,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="branches-GETapi-v1-branches">List branches</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -1688,6 +1988,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/branches?search=Main&amp;is_active=true&amp;per_page=15" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -1706,6 +2007,7 @@ Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1753,7 +2055,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-branches" data-method="GET"
       data-path="api/v1/branches"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1783,6 +2085,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/branches</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-branches"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -1849,6 +2163,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="branches-POSTapi-v1-branches">Create branch</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Super-admin only (policy + StoreBranchRequest).</p>
@@ -1860,6 +2175,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/branches" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -1879,6 +2195,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -1919,7 +2236,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-branches" data-method="POST"
       data-path="api/v1/branches"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -1949,6 +2266,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/branches</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-branches"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2073,6 +2402,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="branches-GETapi-v1-branches--id-">Show branch</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Includes the user count (staff_count) via loadCount.</p>
@@ -2084,6 +2414,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/branches/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2094,6 +2425,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2141,7 +2473,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-branches--id-" data-method="GET"
       data-path="api/v1/branches/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2171,6 +2503,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/branches/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-branches--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2213,6 +2557,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="branches-PUTapi-v1-branches--id-">Update branch</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Super-admin only (policy + UpdateBranchRequest).</p>
@@ -2224,6 +2569,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/branches/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2232,7 +2578,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"address\": \"architecto\",
     \"phone\": \"ngzmiyvdljnikhwa\",
     \"tax_rate\": 24,
-    \"is_active\": true
+    \"is_active\": false
 }"
 </code></pre></div>
 
@@ -2243,6 +2589,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2253,7 +2600,7 @@ let body = {
     "address": "architecto",
     "phone": "ngzmiyvdljnikhwa",
     "tax_rate": 24,
-    "is_active": true
+    "is_active": false
 };
 
 fetch(url, {
@@ -2283,7 +2630,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-branches--id-" data-method="PUT"
       data-path="api/v1/branches/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2317,6 +2664,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/branches/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-branches--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2447,13 +2806,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
         </form>
 
                     <h2 id="branches-DELETEapi-v1-branches--id-">Deactivate branch</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Soft-deletes after flipping is_active — history keeps working.</p>
@@ -2465,6 +2825,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
     "http://localhost:8000/api/v1/branches/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2475,6 +2836,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2506,7 +2868,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-v1-branches--id-" data-method="DELETE"
       data-path="api/v1/branches/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2536,6 +2898,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/branches/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-v1-branches--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2586,6 +2960,7 @@ in the gated ReportController.</p>
                                 <h2 id="inventory-GETapi-v1-inventory">List stock levels</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -2597,6 +2972,7 @@ in the gated ReportController.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory?branch_id=1&amp;product_id=1&amp;search=mouse&amp;per_page=15" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2616,6 +2992,7 @@ Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2663,7 +3040,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory" data-method="GET"
       data-path="api/v1/inventory"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2693,6 +3070,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2771,6 +3160,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="inventory-POSTapi-v1-inventory-adjust">Adjust stock</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Applies a signed delta under row lock and writes a ledger row.
@@ -2783,6 +3173,7 @@ Negative results need a "correction" reason (enforced in the service).</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/inventory/adjust" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -2800,6 +3191,7 @@ Negative results need a "correction" reason (enforced in the service).</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -2838,7 +3230,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-inventory-adjust" data-method="POST"
       data-path="api/v1/inventory/adjust"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -2868,6 +3260,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/adjust</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-inventory-adjust"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -2946,6 +3350,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="inventory-GETapi-v1-inventory-movements">Stock movement history</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>The append-only ledger, newest first. No amounts beyond per-row
@@ -2958,6 +3363,7 @@ unit/total figures — aggregates are reports, not this endpoint.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory/movements?branch_id=1&amp;product_id=1&amp;movement_type=receipt&amp;from=2026-01-01&amp;to=2026-12-31" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -2978,6 +3384,7 @@ Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3025,7 +3432,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory-movements" data-method="GET"
       data-path="api/v1/inventory/movements"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3055,6 +3462,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/movements</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory-movements"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3150,6 +3569,7 @@ is deliberately no "list everyone's notifications" action.</p>
                                 <h2 id="notifications-GETapi-v1-notifications">List notifications</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Newest first; unread_only narrows to unreads via query string.</p>
@@ -3161,6 +3581,7 @@ is deliberately no "list everyone's notifications" action.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/notifications" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3171,6 +3592,7 @@ is deliberately no "list everyone's notifications" action.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3218,7 +3640,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-notifications" data-method="GET"
       data-path="api/v1/notifications"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3249,6 +3671,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-notifications"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3277,6 +3711,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="notifications-GETapi-v1-notifications-unread-count">Unread count</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Badge number for the inbox.</p>
@@ -3288,6 +3723,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/notifications/unread-count" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3298,6 +3734,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3345,7 +3782,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-notifications-unread-count" data-method="GET"
       data-path="api/v1/notifications/unread-count"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3376,6 +3813,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-notifications-unread-count"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3404,6 +3853,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="notifications-PUTapi-v1-notifications-read-all">Mark all notifications as read</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Single bulk query (no per-row events); only touches the caller's rows.</p>
@@ -3415,6 +3865,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/notifications/read-all" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3425,6 +3876,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3456,7 +3908,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-notifications-read-all" data-method="PUT"
       data-path="api/v1/notifications/read-all"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3487,6 +3939,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-notifications-read-all"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -3515,6 +3979,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="notifications-PUTapi-v1-notifications--notification_id--read">Mark notification as read</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Ownership enforced: reading another user's id 403s even if enumerable.</p>
@@ -3526,6 +3991,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/notifications/16/read" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3536,6 +4002,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3567,7 +4034,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-notifications--notification_id--read" data-method="PUT"
       data-path="api/v1/notifications/{notification_id}/read"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3597,6 +4064,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/notifications/{notification_id}/read</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-notifications--notification_id--read"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3643,6 +4122,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="products-POSTapi-v1-products-import">Bulk CSV import products</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Queued — returns 202 immediately, rows are processed by
@@ -3657,9 +4137,10 @@ name, category, description, cost_price, selling_price, min_stock_threshold, bar
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/products/import" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "file=@C:\Users\thabangm\AppData\Local\Temp\php2822.tmp" </code></pre></div>
+    --form "file=@C:\Users\thabangm\AppData\Local\Temp\php7267.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -3668,6 +4149,7 @@ name, category, description, cost_price, selling_price, min_stock_threshold, bar
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
@@ -3702,7 +4184,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-products-import" data-method="POST"
       data-path="api/v1/products/import"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="1"
       data-isarraybody="0"
       autocomplete="off"
@@ -3732,6 +4214,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products/import</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-products-import"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3767,13 +4261,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be a file. Must not be greater than 10240 kilobytes. Example: <code>C:\Users\thabangm\AppData\Local\Temp\php2822.tmp</code></p>
+<p>Must be a file. Must not be greater than 10240 kilobytes. Example: <code>C:\Users\thabangm\AppData\Local\Temp\php7267.tmp</code></p>
         </div>
         </form>
 
                     <h2 id="products-GETapi-v1-products--product_id--price-history">Product price history</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Manager-only: exposes cost prices (see ProductPolicy).</p>
@@ -3785,6 +4280,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/products/1/price-history" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3795,6 +4291,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3842,7 +4339,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-products--product_id--price-history" data-method="GET"
       data-path="api/v1/products/{product_id}/price-history"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -3872,6 +4369,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products/{product_id}/price-history</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-products--product_id--price-history"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -3914,6 +4423,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="products-GETapi-v1-products">List products</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Branch scoping changes the stock filters: with branch_id they (and the
@@ -3926,6 +4436,7 @@ eager-loaded stock levels) apply to that branch only.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/products?search=keyboard&amp;category_id=1&amp;branch_id=1&amp;stock_status=low_stock&amp;per_page=15" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -3946,6 +4457,7 @@ Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -3993,7 +4505,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-products" data-method="GET"
       data-path="api/v1/products"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4023,6 +4535,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-products"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -4113,6 +4637,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="products-POSTapi-v1-products">Create product</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>The SKU is auto-generated when omitted (see Product::booted()).</p>
@@ -4124,6 +4649,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/products" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -4148,6 +4674,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -4193,7 +4720,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-products" data-method="POST"
       data-path="api/v1/products"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4223,6 +4750,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-products"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -4395,6 +4934,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="products-GETapi-v1-products--id-">Show product</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Includes category, supplier and per-branch stock (with branch names).</p>
@@ -4406,6 +4946,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/products/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -4416,6 +4957,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -4463,7 +5005,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-products--id-" data-method="GET"
       data-path="api/v1/products/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4493,6 +5035,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-products--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -4535,6 +5089,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="products-PUTapi-v1-products--id-">Update product</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Price changes are journaled automatically by ProductObserver.</p>
@@ -4546,6 +5101,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/products/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -4559,7 +5115,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"barcode\": \"m\",
     \"image_url\": \"https:\\/\\/www.gulgowski.com\\/nihil-accusantium-harum-mollitia-modi-deserunt\",
     \"min_stock_threshold\": 87,
-    \"is_active\": false
+    \"is_active\": true
 }"
 </code></pre></div>
 
@@ -4570,6 +5126,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -4585,7 +5142,7 @@ let body = {
     "barcode": "m",
     "image_url": "https:\/\/www.gulgowski.com\/nihil-accusantium-harum-mollitia-modi-deserunt",
     "min_stock_threshold": 87,
-    "is_active": false
+    "is_active": true
 };
 
 fetch(url, {
@@ -4615,7 +5172,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-products--id-" data-method="PUT"
       data-path="api/v1/products/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4649,6 +5206,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-products--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -4827,13 +5396,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
                     <h2 id="products-DELETEapi-v1-products--id-">Soft delete product</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>The SKU stays reserved (withTrashed uniqueness) so it can't be recycled.</p>
@@ -4845,6 +5415,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
     "http://localhost:8000/api/v1/products/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -4855,6 +5426,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -4886,7 +5458,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-v1-products--id-" data-method="DELETE"
       data-path="api/v1/products/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -4916,6 +5488,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/products/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-v1-products--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -4964,6 +5548,7 @@ receive call books one batch and recomputes the header status.</p>
                                 <h2 id="purchase-orders-GETapi-v1-purchase-orders">List purchase orders</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Supports the service's status/supplier/branch filters via query string.</p>
@@ -4975,6 +5560,7 @@ receive call books one batch and recomputes the header status.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/purchase-orders" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -4985,6 +5571,7 @@ receive call books one batch and recomputes the header status.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5032,7 +5619,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-purchase-orders" data-method="GET"
       data-path="api/v1/purchase-orders"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5063,6 +5650,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-purchase-orders"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -5091,6 +5690,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="purchase-orders-POSTapi-v1-purchase-orders">Create purchase order</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Always starts as draft; line-item totals are computed server-side.</p>
@@ -5102,6 +5702,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/purchase-orders" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -5125,6 +5726,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5169,7 +5771,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-purchase-orders" data-method="POST"
       data-path="api/v1/purchase-orders"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5199,6 +5801,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/purchase-orders</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-purchase-orders"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -5313,6 +5927,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="purchase-orders-GETapi-v1-purchase-orders--purchaseOrder_id-">Show purchase order</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Includes lines with their per-line received progress.</p>
@@ -5324,6 +5939,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/purchase-orders/16" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -5334,6 +5950,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5381,7 +5998,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-purchase-orders--purchaseOrder_id-" data-method="GET"
       data-path="api/v1/purchase-orders/{purchaseOrder_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5411,6 +6028,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/purchase-orders/{purchaseOrder_id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-purchase-orders--purchaseOrder_id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -5453,6 +6082,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="purchase-orders-PUTapi-v1-purchase-orders--purchaseOrder_id--send">Send purchase order</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Draft → sent. One-way for this step; from here only receive or cancel.</p>
@@ -5464,6 +6094,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/purchase-orders/16/send" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -5474,6 +6105,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5505,7 +6137,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-purchase-orders--purchaseOrder_id--send" data-method="PUT"
       data-path="api/v1/purchase-orders/{purchaseOrder_id}/send"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5535,6 +6167,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/purchase-orders/{purchaseOrder_id}/send</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-purchase-orders--purchaseOrder_id--send"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -5577,6 +6221,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="purchase-orders-POSTapi-v1-purchase-orders--purchaseOrder_id--receive">Receive goods</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Books one batch against the lines (over-receiving rejected per line),
@@ -5590,6 +6235,7 @@ PurchaseOrderReceived per batch — partial or complete.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/purchase-orders/16/receive" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -5609,6 +6255,7 @@ PurchaseOrderReceived per batch — partial or complete.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5649,7 +6296,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-purchase-orders--purchaseOrder_id--receive" data-method="POST"
       data-path="api/v1/purchase-orders/{purchaseOrder_id}/receive"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5679,6 +6326,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/purchase-orders/{purchaseOrder_id}/receive</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-purchase-orders--purchaseOrder_id--receive"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -5758,6 +6417,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="purchase-orders-PUTapi-v1-purchase-orders--purchaseOrder_id--cancel">Cancel purchase order</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Stops future receipts; already-received stock stays on the shelves.
@@ -5770,6 +6430,7 @@ Fully received or already-cancelled orders can't be cancelled.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/purchase-orders/16/cancel" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -5780,6 +6441,7 @@ Fully received or already-cancelled orders can't be cancelled.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5811,7 +6473,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-purchase-orders--purchaseOrder_id--cancel" data-method="PUT"
       data-path="api/v1/purchase-orders/{purchaseOrder_id}/cancel"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5841,6 +6503,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/purchase-orders/{purchaseOrder_id}/cancel</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-purchase-orders--purchaseOrder_id--cancel"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -5890,6 +6564,7 @@ authenticated users.</p>
                                 <h2 id="reports-GETapi-v1-reports-inventory-valuation">Inventory valuation report</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>On-hand value per product per branch, valued at cost (not revenue).</p>
@@ -5901,6 +6576,7 @@ authenticated users.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/reports/inventory-valuation" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -5911,6 +6587,7 @@ authenticated users.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -5958,7 +6635,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-reports-inventory-valuation" data-method="GET"
       data-path="api/v1/reports/inventory-valuation"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -5989,6 +6666,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-reports-inventory-valuation"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -6017,6 +6706,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="reports-GETapi-v1-reports-stock-movements">Stock movement report</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Filtered ledger view (branch/product/type/date via query string).</p>
@@ -6028,6 +6718,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/reports/stock-movements" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6038,6 +6729,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6085,7 +6777,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-reports-stock-movements" data-method="GET"
       data-path="api/v1/reports/stock-movements"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6116,6 +6808,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-reports-stock-movements"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -6144,6 +6848,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="reports-GETapi-v1-reports-low-stock">Low stock report</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Every stock row currently below its product's threshold.</p>
@@ -6155,6 +6860,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/reports/low-stock" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6165,6 +6871,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6212,7 +6919,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-reports-low-stock" data-method="GET"
       data-path="api/v1/reports/low-stock"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6243,6 +6950,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-reports-low-stock"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -6271,6 +6990,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="reports-GETapi-v1-reports-product-performance">Product performance report</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Units sold + revenue per product from sale movements. Revenue prefers
@@ -6283,6 +7003,7 @@ recorded totals, falling back to current selling price (see service).</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/reports/product-performance" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6293,6 +7014,7 @@ recorded totals, falling back to current selling price (see service).</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6340,7 +7062,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-reports-product-performance" data-method="GET"
       data-path="api/v1/reports/product-performance"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6371,6 +7093,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-reports-product-performance"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -6399,6 +7133,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="reports-GETapi-v1-reports-transfers">Transfer history report</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -6410,6 +7145,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/reports/transfers" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6420,6 +7156,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6467,7 +7204,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-reports-transfers" data-method="GET"
       data-path="api/v1/reports/transfers"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6498,6 +7235,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-reports-transfers"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -6526,6 +7275,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="reports-GETapi-v1-reports-export--type-">CSV export</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Streams the report so memory stays flat regardless of row count.
@@ -6540,6 +7290,7 @@ inventory-valuation, low-stock, stock-movements, product-performance, transfers<
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/reports/export/architecto" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6550,6 +7301,7 @@ inventory-valuation, low-stock, stock-movements, product-performance, transfers<
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6597,7 +7349,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-reports-export--type-" data-method="GET"
       data-path="api/v1/reports/export/{type}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6627,6 +7379,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/reports/export/{type}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-reports-export--type-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -6675,6 +7439,7 @@ into live stock). Counting is open to the branch; approval is managerial
                                 <h2 id="stock-take-GETapi-v1-inventory-stock-take">List stock takes</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Supports the service's branch/status filters via query string.</p>
@@ -6686,6 +7451,7 @@ into live stock). Counting is open to the branch; approval is managerial
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory/stock-take" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6696,6 +7462,7 @@ into live stock). Counting is open to the branch; approval is managerial
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6743,7 +7510,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory-stock-take" data-method="GET"
       data-path="api/v1/inventory/stock-take"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6774,6 +7541,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory-stock-take"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -6802,6 +7581,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-take-POSTapi-v1-inventory-stock-take">Start stock take</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Opens a session, optionally pre-seeding count lines for given products.</p>
@@ -6813,6 +7593,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/inventory/stock-take" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -6831,6 +7612,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -6870,7 +7652,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-inventory-stock-take" data-method="POST"
       data-path="api/v1/inventory/stock-take"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -6900,6 +7682,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/stock-take</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-inventory-stock-take"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -6968,6 +7762,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-take-GETapi-v1-inventory-stock-take--stockTake_id-">Show stock take</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Includes count lines with their products for the counting UI.</p>
@@ -6979,6 +7774,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory/stock-take/16" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -6989,6 +7785,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7036,7 +7833,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory-stock-take--stockTake_id-" data-method="GET"
       data-path="api/v1/inventory/stock-take/{stockTake_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7066,6 +7863,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/stock-take/{stockTake_id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory-stock-take--stockTake_id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -7108,6 +7917,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-take-PUTapi-v1-inventory-stock-take--stockTake_id--items">Submit counted quantities</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Upserts per product, so recounts overwrite — re-submitting is allowed
@@ -7120,6 +7930,7 @@ for corrections. Touches no live stock (approval does that).</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/inventory/stock-take/16/items" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -7140,6 +7951,7 @@ for corrections. Touches no live stock (approval does that).</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7181,7 +7993,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-inventory-stock-take--stockTake_id--items" data-method="PUT"
       data-path="api/v1/inventory/stock-take/{stockTake_id}/items"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7211,6 +8023,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/stock-take/{stockTake_id}/items</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-inventory-stock-take--stockTake_id--items"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -7302,6 +8126,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-take-PUTapi-v1-inventory-stock-take--stockTake_id--approve">Approve stock take</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Writes counts into live stock levels with per-product adjustment
@@ -7314,6 +8139,7 @@ movements. Skips uncounted and zero-difference lines.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/inventory/stock-take/16/approve" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -7324,6 +8150,7 @@ movements. Skips uncounted and zero-difference lines.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7355,7 +8182,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-inventory-stock-take--stockTake_id--approve" data-method="PUT"
       data-path="api/v1/inventory/stock-take/{stockTake_id}/approve"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7385,6 +8212,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/stock-take/{stockTake_id}/approve</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-inventory-stock-take--stockTake_id--approve"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -7427,6 +8266,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-take-GETapi-v1-inventory-stock-take--stockTake_id--variance-report">Variance report</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Read-only per-product system-vs-counted breakdown for review screens.</p>
@@ -7438,6 +8278,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory/stock-take/16/variance-report" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -7448,6 +8289,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7495,7 +8337,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory-stock-take--stockTake_id--variance-report" data-method="GET"
       data-path="api/v1/inventory/stock-take/{stockTake_id}/variance-report"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7525,6 +8367,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/stock-take/{stockTake_id}/variance-report</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory-stock-take--stockTake_id--variance-report"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -7573,6 +8427,7 @@ StockTransferPolicy) — the receiver accepts the stock.</p>
                                 <h2 id="stock-transfers-GETapi-v1-inventory-transfers">List transfers</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Supports the service's status/branch/date filters via query string.</p>
@@ -7584,6 +8439,7 @@ StockTransferPolicy) — the receiver accepts the stock.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory/transfers" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -7594,6 +8450,7 @@ StockTransferPolicy) — the receiver accepts the stock.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7641,7 +8498,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory-transfers" data-method="GET"
       data-path="api/v1/inventory/transfers"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7672,6 +8529,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory-transfers"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -7700,6 +8569,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-transfers-POSTapi-v1-inventory-transfers">Create transfer request</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Reserves nothing yet — source stock is re-checked and decremented at
@@ -7712,6 +8582,7 @@ approval time, so request against live availability.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/inventory/transfers" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -7729,6 +8600,7 @@ approval time, so request against live availability.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7767,7 +8639,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-inventory-transfers" data-method="POST"
       data-path="api/v1/inventory/transfers"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7797,6 +8669,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/transfers</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-inventory-transfers"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -7875,6 +8759,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-transfers-GETapi-v1-inventory-transfers--transfer_id-">Show transfer</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Includes requester/approver names for the approval trail.</p>
@@ -7886,6 +8771,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/inventory/transfers/16" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -7896,6 +8782,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -7943,7 +8830,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-inventory-transfers--transfer_id-" data-method="GET"
       data-path="api/v1/inventory/transfers/{transfer_id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -7973,6 +8860,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/transfers/{transfer_id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-inventory-transfers--transfer_id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -8015,6 +8914,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-transfers-PUTapi-v1-inventory-transfers--transfer_id--approve">Approve transfer</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Decrements the source branch. Rejects when source stock dropped below
@@ -8027,6 +8927,7 @@ the requested quantity since the request was created.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/inventory/transfers/16/approve" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -8037,6 +8938,7 @@ the requested quantity since the request was created.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8068,7 +8970,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-inventory-transfers--transfer_id--approve" data-method="PUT"
       data-path="api/v1/inventory/transfers/{transfer_id}/approve"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8098,6 +9000,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/transfers/{transfer_id}/approve</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-inventory-transfers--transfer_id--approve"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -8140,6 +9054,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-transfers-PUTapi-v1-inventory-transfers--transfer_id--reject">Reject transfer</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Terminal state, no stock moves. The reason is stored for the audit trail.</p>
@@ -8151,6 +9066,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/inventory/transfers/16/reject" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -8165,6 +9081,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8200,7 +9117,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-inventory-transfers--transfer_id--reject" data-method="PUT"
       data-path="api/v1/inventory/transfers/{transfer_id}/reject"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8230,6 +9147,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/transfers/{transfer_id}/reject</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-inventory-transfers--transfer_id--reject"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -8285,6 +9214,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="stock-transfers-PUTapi-v1-inventory-transfers--transfer_id--receive">Receive transfer</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Increments the destination branch and closes the transfer. Creates the
@@ -8297,6 +9227,7 @@ destination stock level on first receipt.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/inventory/transfers/16/receive" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -8307,6 +9238,7 @@ destination stock level on first receipt.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8338,7 +9270,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-inventory-transfers--transfer_id--receive" data-method="PUT"
       data-path="api/v1/inventory/transfers/{transfer_id}/receive"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8368,6 +9300,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/inventory/transfers/{transfer_id}/receive</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-inventory-transfers--transfer_id--receive"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -8415,6 +9359,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                                 <h2 id="suppliers-GETapi-v1-suppliers">List suppliers</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Supports the service's name/email/contact search via query string.</p>
@@ -8426,6 +9371,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/suppliers" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -8436,6 +9382,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8483,7 +9430,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-suppliers" data-method="GET"
       data-path="api/v1/suppliers"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8514,6 +9461,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
                                 <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-suppliers"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
  &nbsp;
@@ -8542,6 +9501,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="suppliers-POSTapi-v1-suppliers">Create supplier</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -8553,6 +9513,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost:8000/api/v1/suppliers" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -8561,7 +9522,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"email\": \"ashly64@example.com\",
     \"phone\": \"v\",
     \"address\": \"architecto\",
-    \"is_active\": false
+    \"is_active\": true
 }"
 </code></pre></div>
 
@@ -8572,6 +9533,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8582,7 +9544,7 @@ let body = {
     "email": "ashly64@example.com",
     "phone": "v",
     "address": "architecto",
-    "is_active": false
+    "is_active": true
 };
 
 fetch(url, {
@@ -8612,7 +9574,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-POSTapi-v1-suppliers" data-method="POST"
       data-path="api/v1/suppliers"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8642,6 +9604,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/suppliers</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-suppliers"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -8747,13 +9721,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
                     <h2 id="suppliers-GETapi-v1-suppliers--id-">Show supplier</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -8765,6 +9740,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
     --get "http://localhost:8000/api/v1/suppliers/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -8775,6 +9751,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8822,7 +9799,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-GETapi-v1-suppliers--id-" data-method="GET"
       data-path="api/v1/suppliers/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8852,6 +9829,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/suppliers/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-v1-suppliers--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -8894,6 +9883,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                     <h2 id="suppliers-PUTapi-v1-suppliers--id-">Update supplier</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 
@@ -8905,6 +9895,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
     "http://localhost:8000/api/v1/suppliers/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
@@ -8913,7 +9904,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
     \"email\": \"ashly64@example.com\",
     \"phone\": \"v\",
     \"address\": \"architecto\",
-    \"is_active\": false
+    \"is_active\": true
 }"
 </code></pre></div>
 
@@ -8924,6 +9915,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -8934,7 +9926,7 @@ let body = {
     "email": "ashly64@example.com",
     "phone": "v",
     "address": "architecto",
-    "is_active": false
+    "is_active": true
 };
 
 fetch(url, {
@@ -8964,7 +9956,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-PUTapi-v1-suppliers--id-" data-method="PUT"
       data-path="api/v1/suppliers/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -8998,6 +9990,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/suppliers/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-suppliers--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -9116,13 +10120,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>false</code></p>
+<p>Example: <code>true</code></p>
         </div>
         </form>
 
                     <h2 id="suppliers-DELETEapi-v1-suppliers--id-">Deactivate supplier</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
 <p>Super-admin only: flips is_active then soft-deletes so order history
@@ -9135,6 +10140,7 @@ keeps working.</p>
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
     "http://localhost:8000/api/v1/suppliers/1" \
+    --header "Authorization: Bearer {YOUR_TOKEN}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -9145,6 +10151,7 @@ keeps working.</p>
 );
 
 const headers = {
+    "Authorization": "Bearer {YOUR_TOKEN}",
     "Content-Type": "application/json",
     "Accept": "application/json",
 };
@@ -9176,7 +10183,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 </span>
 <form id="form-DELETEapi-v1-suppliers--id-" data-method="DELETE"
       data-path="api/v1/suppliers/{id}"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
@@ -9206,6 +10213,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <b><code>api/v1/suppliers/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="DELETEapi-v1-suppliers--id-"
+               value="Bearer {YOUR_TOKEN}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_TOKEN}</code></p>
+            </div>
                                 <div style="padding-left: 28px; clear: unset;">
                 <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
 &nbsp;
@@ -9247,7 +10266,417 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
             
 
-        
+        <!-- GENERATED by `php artisan docs:appendix` from docs/*.md — do not edit by hand. -->
+<hr />
+<h1 id="introduction">Introduction</h1>
+<p>AssetArray API is a production-grade Laravel REST API for multi-branch asset and inventory management.</p>
+<h2 id="base-url">Base URL</h2>
+<pre><code class="language-txt">http://localhost:8000/api/v1</code></pre>
+<h2 id="authentication">Authentication</h2>
+<p>All protected endpoints require a Sanctum bearer token.</p>
+<pre><code class="language-http">Authorization: Bearer YOUR_TOKEN</code></pre>
+<p>See <a href="02-authentication-flow.md">Authentication Flow</a> for login, logout, token refresh and password reset.</p>
+<h2 id="key-modules">Key Modules</h2>
+<ul>
+<li>Authentication</li>
+<li>Branch management</li>
+<li>Product and asset catalogue</li>
+<li>Inventory control</li>
+<li>Stock transfers</li>
+<li>Stock takes</li>
+<li>Suppliers</li>
+<li>Purchase orders</li>
+<li>Reporting</li>
+<li>Notifications</li>
+<li>Audit logs</li>
+</ul>
+<h2 id="purpose">Purpose</h2>
+<p>AssetArray API demonstrates enterprise Laravel backend engineering, including:</p>
+<ul>
+<li>clean service-layer architecture</li>
+<li>role-based authorisation</li>
+<li>transactional inventory logic</li>
+<li>queue-driven notifications</li>
+<li>audit trails</li>
+<li>API documentation</li>
+<li>automated testing</li>
+</ul>
+<hr />
+<h1 id="authentication-flow">Authentication Flow</h1>
+<p>AssetArray API uses Laravel Sanctum for token-based API authentication.</p>
+<h2 id="login">Login</h2>
+<pre><code class="language-http">POST /api/v1/auth/login</code></pre>
+<p>Request:</p>
+<pre><code class="language-json">{
+  "email": "manager@assetarray.test",
+  "password": "password"
+}</code></pre>
+<p>Response:</p>
+<pre><code class="language-json">{
+  "message": "Login successful.",
+  "data": {
+    "user": {},
+    "token": "...",
+    "token_type": "Bearer"
+  }
+}</code></pre>
+<p>Failures are deliberately generic (<code>The provided credentials are incorrect.</code>)
+so responses never reveal which emails exist. Logins are throttled
+(10 attempts per minute) — further attempts return <code>429</code>.</p>
+<h2 id="use-token">Use Token</h2>
+<pre><code class="language-http">Authorization: Bearer YOUR_TOKEN</code></pre>
+<h2 id="logout">Logout</h2>
+<pre><code class="language-http">POST /api/v1/auth/logout</code></pre>
+<p>Revokes only the token used for this request. Other devices stay signed in.</p>
+<h2 id="refresh-token">Refresh Token</h2>
+<pre><code class="language-http">POST /api/v1/auth/refresh</code></pre>
+<p>Deletes the current token and issues a new one. Discard the old token —
+it stops working immediately.</p>
+<h2 id="current-profile">Current Profile</h2>
+<pre><code class="language-http">GET /api/v1/auth/profile
+PUT /api/v1/auth/profile</code></pre>
+<p>Read or partially update your own profile (name, email, password).
+The password is assigned plain-text; the model hashes it exactly once.</p>
+<h2 id="forgot-reset-password">Forgot / Reset Password</h2>
+<pre><code class="language-http">POST /api/v1/auth/forgot-password
+POST /api/v1/auth/reset-password</code></pre>
+<p><code>forgot-password</code> sends a reset link via the configured broker.
+<code>reset-password</code> consumes the token with <code>email</code>, <code>password</code> and
+<code>password_confirmation</code>. Both are throttled like login.</p>
+<hr />
+<h1 id="roles-and-permissions">Roles and Permissions</h1>
+<p>AssetArray API uses three roles:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>super_admin</code></td>
+<td>Full system access; bypasses every policy via <code>before()</code> hooks</td>
+</tr>
+<tr>
+<td><code>branch_manager</code></td>
+<td>Manages branch operations, products, inventory, transfers, POs</td>
+</tr>
+<tr>
+<td><code>staff</code></td>
+<td>Limited operational access, such as submitting stock take counts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deactivated-accounts">Deactivated Accounts</h2>
+<p><code>is_active = false</code> blocks login (<code>AuthService</code>) and returns <code>403</code> on any
+authenticated request (the <code>active</code> middleware). Tokens issued before
+deactivation stop working — there is no grace period.</p>
+<h2 id="authorisation-strategy">Authorisation Strategy</h2>
+<p>Authorisation is enforced using Laravel Policies and Gates, plus two
+role gates for cross-model concerns:</p>
+<table>
+<thead>
+<tr>
+<th>Ability</th>
+<th>Who</th>
+<th>Used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>manager-or-above</code></td>
+<td>Managers and super-admins</td>
+<td>Reports, exports</td>
+</tr>
+<tr>
+<td><code>super-admin</code></td>
+<td>Super-admins only</td>
+<td>Audit log listing</td>
+</tr>
+</tbody>
+</table>
+<p>Controllers should never manually check roles unless necessary. Instead, use:</p>
+<pre><code class="language-php">$this-&gt;authorize('create', Product::class);</code></pre>
+<p>or Form Request:</p>
+<pre><code class="language-php">public function authorize(): bool
+{
+    return $this-&gt;user()-&gt;can('create', Product::class);
+}</code></pre>
+<p>Branch comparisons in policies cast both sides to <code>int</code> — strict <code>===</code>
+against a string-hydrated id would fail closed and strand workflows.</p>
+<hr />
+<h1 id="product-lifecycle">Product Lifecycle</h1>
+<p>Products represent sellable or trackable assets.</p>
+<h2 id="create-product">Create Product</h2>
+<pre><code class="language-http">POST /api/v1/products</code></pre>
+<p>SKU is auto-generated (<code>PRD-XXXXXXXX</code>, collision-checked including
+soft-deleted rows) when omitted. Never recycled.</p>
+<h2 id="show-product">Show Product</h2>
+<pre><code class="language-http">GET /api/v1/products/{id}</code></pre>
+<p>Includes category, supplier and per-branch stock levels.</p>
+<h2 id="update-product">Update Product</h2>
+<pre><code class="language-http">PUT /api/v1/products/{id}</code></pre>
+<p>Price changes are journaled automatically to <code>product_price_histories</code>
+by <code>ProductObserver</code> — partial changes record only the changed side.</p>
+<h2 id="soft-delete-product">Soft Delete Product</h2>
+<pre><code class="language-http">DELETE /api/v1/products/{id}</code></pre>
+<p>Manager-level and up. The SKU stays reserved after deletion.</p>
+<h2 id="price-history">Price History</h2>
+<pre><code class="language-http">GET /api/v1/products/{id}/price-history</code></pre>
+<p>Manager-only: exposes cost prices. Newest first, timed by <code>changed_at</code>.</p>
+<h2 id="csv-import">CSV Import</h2>
+<pre><code class="language-http">POST /api/v1/products/import</code></pre>
+<p>Queued — returns <code>202</code> immediately; rows are processed by
+<code>ProcessProductCsvImportJob</code>. Per-row failures are logged, never fatal.</p>
+<p>Expected CSV headers:</p>
+<pre><code class="language-csv">name,category,description,cost_price,selling_price,min_stock_threshold,barcode</code></pre>
+<hr />
+<h1 id="inventory-workflow">Inventory Workflow</h1>
+<p>Inventory is tracked per product per branch (<code>stock_levels</code>, unique on
+the pair). Listing is open to all authenticated users (staff need
+visibility to count); writes are manager-only.</p>
+<h2 id="stock-adjustment">Stock Adjustment</h2>
+<pre><code class="language-http">POST /api/v1/inventory/adjust</code></pre>
+<p>Rules:</p>
+<ul>
+<li>Runs inside a database transaction with <code>lockForUpdate()</code> — concurrent
+adjustments can't lose updates</li>
+<li>Prevents negative stock unless the reason contains <code>correction</code></li>
+<li>Creates an <code>adjustment</code> stock movement (the ledger is append-only)</li>
+<li>Dispatches <code>CheckLowStockJob</code> when the new quantity drops below the
+product's <code>min_stock_threshold</code></li>
+<li>Writes an audit log inside the same transaction (rolls back together)</li>
+</ul>
+<h2 id="movement-history">Movement History</h2>
+<pre><code class="language-http">GET /api/v1/inventory/movements</code></pre>
+<p>Filterable by <code>branch_id</code>, <code>product_id</code>, <code>movement_type</code> (<code>receipt</code>,
+<code>sale</code>, <code>adjustment</code>, <code>transfer_in</code>, <code>transfer_out</code>) and date range.
+Newest first.</p>
+<hr />
+<h1 id="transfer-workflow">Transfer Workflow</h1>
+<p>Stock transfers move inventory between branches. Approval rights sit with
+the <strong>destination</strong> branch's manager — the receiver accepts the stock.</p>
+<h2 id="states">States</h2>
+<pre><code class="language-txt">pending -&gt; approved -&gt; received
+pending -&gt; rejected</code></pre>
+<h2 id="create-transfer">Create Transfer</h2>
+<pre><code class="language-http">POST /api/v1/inventory/transfers</code></pre>
+<p>Reserves nothing: source stock is re-checked and decremented at approval,
+so request against live availability. Same-branch requests are rejected.</p>
+<h2 id="approve-transfer">Approve Transfer</h2>
+<pre><code class="language-http">PUT /api/v1/inventory/transfers/{id}/approve</code></pre>
+<p>Deducts stock from the source branch under row lock and writes a
+<code>transfer_out</code> movement. Fails when source stock dropped since the request.</p>
+<h2 id="receive-transfer">Receive Transfer</h2>
+<pre><code class="language-http">PUT /api/v1/inventory/transfers/{id}/receive</code></pre>
+<p>Adds stock to the destination branch (creating the level on first receipt)
+and writes a <code>transfer_in</code> movement. Stock is never double-counted:
+source decrements at approval, destination increments at receipt.</p>
+<h2 id="reject-transfer">Reject Transfer</h2>
+<pre><code class="language-http">PUT /api/v1/inventory/transfers/{id}/reject</code></pre>
+<p>Requires a <code>reason</code>, stored for the audit trail. Terminal state.</p>
+<hr />
+<h1 id="stock-take-workflow">Stock Take Workflow</h1>
+<p>Stock takes reconcile physical counts with system quantities. Counting is
+open to anyone on the branch (staff do the walking); only the branch's
+manager can approve counts into live stock.</p>
+<h2 id="states">States</h2>
+<pre><code class="language-txt">open -&gt; submitted -&gt; approved</code></pre>
+<h2 id="start-stock-take">Start Stock Take</h2>
+<pre><code class="language-http">POST /api/v1/inventory/stock-take</code></pre>
+<p>Optionally pre-seeds count lines via <code>product_ids</code>, snapshotting each
+product's current system quantity.</p>
+<h2 id="submit-counts">Submit Counts</h2>
+<pre><code class="language-http">PUT /api/v1/inventory/stock-take/{id}/items</code></pre>
+<p>Upserts per product (<code>variance = counted − system</code>), so recounts overwrite
+and re-submission is allowed for corrections. Touches no live stock.</p>
+<h2 id="approve-stock-take">Approve Stock Take</h2>
+<pre><code class="language-http">PUT /api/v1/inventory/stock-take/{id}/approve</code></pre>
+<p>Writes counts into live stock levels with per-product <code>adjustment</code>
+movements. Uncounted and zero-difference lines are skipped (no noise).
+Stamps <code>completed_at</code>. Terminal state.</p>
+<h2 id="variance-report">Variance Report</h2>
+<pre><code class="language-http">GET /api/v1/inventory/stock-take/{id}/variance-report</code></pre>
+<p>Read-only system-vs-counted breakdown for review screens and exports.</p>
+<hr />
+<h1 id="purchase-order-workflow">Purchase Order Workflow</h1>
+<p>Purchase orders manage goods received from suppliers. Goods may arrive in
+multiple batches — each receipt books one batch and recomputes the header.</p>
+<h2 id="states">States</h2>
+<pre><code class="language-txt">draft -&gt; sent -&gt; partially_received -&gt; received
+draft/sent/partially_received -&gt; cancelled</code></pre>
+<h2 id="create-po">Create PO</h2>
+<pre><code class="language-http">POST /api/v1/purchase-orders</code></pre>
+<p>Always starts as <code>draft</code>. Line totals and the header <code>total_amount</code> are
+computed server-side, never trusted from the client.</p>
+<h2 id="show-po">Show PO</h2>
+<pre><code class="language-http">GET /api/v1/purchase-orders/{id}</code></pre>
+<p>Includes lines with per-line ordered-vs-received progress.</p>
+<h2 id="send-po">Send PO</h2>
+<pre><code class="language-http">PUT /api/v1/purchase-orders/{id}/send</code></pre>
+<p>Draft → sent. One-way for this step; from here only receive or cancel.</p>
+<h2 id="receive-goods">Receive Goods</h2>
+<pre><code class="language-http">POST /api/v1/purchase-orders/{id}/receive</code></pre>
+<p>Books one batch: per-line over-receiving is rejected, branch stock is
+bumped under lock, and <code>receipt</code> movements are written. Fires
+<code>PurchaseOrderReceived</code> per batch — partial or complete. <code>received_at</code> is
+stamped only on full completion.</p>
+<h2 id="cancel-po">Cancel PO</h2>
+<pre><code class="language-http">PUT /api/v1/purchase-orders/{id}/cancel</code></pre>
+<p>Stops future receipts; already-received stock stays on the shelves.
+Fully received or already-cancelled orders can't be cancelled.</p>
+<hr />
+<h1 id="reporting-guide">Reporting Guide</h1>
+<p>Read-only analytics. Everything here is gated <code>manager-or-above</code>
+(movement rows and valuations carry cost data).</p>
+<p>Available reports:</p>
+<ul>
+<li>Inventory valuation (<code>GET /api/v1/reports/inventory-valuation</code>) —
+on-hand value per product per branch, valued at <strong>cost</strong>, not revenue</li>
+<li>Stock movements (<code>GET /api/v1/reports/stock-movements</code>)</li>
+<li>Low stock (<code>GET /api/v1/reports/low-stock</code>) — rows below threshold</li>
+<li>Product performance (<code>GET /api/v1/reports/product-performance</code>) —
+units sold + revenue from sale movements (recorded totals preferred,
+falling back to current selling price)</li>
+<li>Transfer history (<code>GET /api/v1/reports/transfers</code>)</li>
+</ul>
+<p>All accept <code>branch_id</code> / date filters via query string. Report methods
+return full collections (no pagination) — scope filters to bound memory
+on large datasets.</p>
+<p>All reports support CSV export (streamed, flat memory):</p>
+<pre><code class="language-http">GET /api/v1/reports/export/{type}</code></pre>
+<p>Supported types:</p>
+<pre><code class="language-txt">inventory-valuation
+low-stock
+stock-movements
+product-performance
+transfers</code></pre>
+<p>Example:</p>
+<pre><code class="language-http">GET /api/v1/reports/export/low-stock</code></pre>
+<p>Unknown types return <code>404</code> (not an empty file).</p>
+<hr />
+<h1 id="notification-system">Notification System</h1>
+<p>AssetArray API includes in-app notifications with an unread workflow.
+There is deliberately no cross-user listing — every endpoint is scoped to
+the caller.</p>
+<p>Notification types:</p>
+<ul>
+<li><code>low_stock</code> — product dropped below threshold (recipients: super-admins<ul>
+<li>the owning branch's manager, resolved by <code>StockAlertService</code>)</li>
+</ul>
+</li>
+<li><code>transfer_requested</code> — transfer awaits destination-side approval</li>
+<li><code>purchase_order_received</code> — goods arrived (partial or complete), sent to
+whoever raised the PO</li>
+</ul>
+<p>Endpoints:</p>
+<pre><code class="language-http">GET /api/v1/notifications
+GET /api/v1/notifications/unread-count
+PUT /api/v1/notifications/{id}/read
+PUT /api/v1/notifications/read-all</code></pre>
+<p>Reading another user's notification id returns <code>403</code> even if enumerable.
+<code>read-all</code> marks the whole inbox in one query (no per-row events).</p>
+<p>Notifications are dispatched through queued <code>ShouldQueue</code> listeners, so a
+slow inbox never delays the stock write that triggered it. With
+<code>QUEUE_CONNECTION=database</code>, run <code>php artisan queue:work</code> — otherwise
+notifications pile up in <code>jobs</code> (correct behaviour, not a bug).</p>
+<hr />
+<h1 id="audit-trail">Audit Trail</h1>
+<p>Every important create, update, and delete action is logged via
+<code>AuditLogService</code>, always inside the mutating transaction — the audit row
+rolls back together with the change it describes, so no orphan entries.</p>
+<pre><code class="language-http">GET /api/v1/audit-logs</code></pre>
+<p>Super-admin only: rows contain before/after snapshots that may include
+sensitive values. Optional <code>entity_type</code>, <code>entity_id</code>, <code>user_id</code>, <code>from</code>,
+<code>to</code>, <code>per_page</code> filters combine with AND, newest first.</p>
+<p>Stored data:</p>
+<ul>
+<li>user_id (null for system/queue actions)</li>
+<li>action (<code>created</code>, <code>updated</code>, <code>deleted</code>)</li>
+<li>entity_type</li>
+<li>entity_id</li>
+<li>old_values</li>
+<li>new_values</li>
+<li>ip_address (null outside HTTP)</li>
+<li>created_at (single timestamp — no <code>updated_at</code> by design)</li>
+</ul>
+<p>Audit logs are immutable. Update or delete attempts throw
+(<code>AuditLogObserver</code>), even for admins — history can only be appended.</p>
+<hr />
+<h1 id="error-handling">Error Handling</h1>
+<p>All API errors render as JSON (never Blade pages), matched on the <code>api/*</code>
+path so even header-less clients get parseable responses.</p>
+<p>Validation errors (<code>422</code>):</p>
+<pre><code class="language-json">{
+  "message": "The given data was invalid.",
+  "errors": {
+    "email": [
+      "The email field is required."
+    ]
+  }
+}</code></pre>
+<p>Authentication errors (<code>401</code> — missing/invalid token):</p>
+<pre><code class="language-json">{
+  "message": "Unauthenticated."
+}</code></pre>
+<p>Authorisation errors (<code>403</code> — valid token, insufficient rights):</p>
+<pre><code class="language-json">{
+  "message": "This action is unauthorized."
+}</code></pre>
+<p>Inactive account (<code>403</code> — the <code>active</code> middleware):</p>
+<pre><code class="language-json">{
+  "message": "Account is inactive."
+}</code></pre>
+<p>Rate limiting (<code>429</code> — public auth endpoints, see throttles in
+<code>routes/api.php</code>):</p>
+<pre><code class="language-json">{
+  "message": "Too Many Attempts."
+}</code></pre>
+<p>Unknown routes and report types return <code>404</code> with a JSON message.
+State-transition violations (e.g. approving a non-pending transfer, or
+receiving more than ordered) return <code>422</code> with the business reason —
+treat the message as user-displayable.</p>
+<hr />
+<h1 id="csv-import-and-export">CSV Import and Export</h1>
+<h2 id="product-import">Product Import</h2>
+<p>Upload CSV to:</p>
+<pre><code class="language-http">POST /api/v1/products/import</code></pre>
+<p>Returns <code>202</code> immediately — rows are processed by
+<code>ProcessProductCsvImportJob</code>, never in the request. The file streams (no
+whole-file reads), per-row failures are logged and skipped, and the source
+file is deleted only on success (kept for inspection on final failure).</p>
+<p>Headers:</p>
+<pre><code class="language-csv">name,category,description,cost_price,selling_price,min_stock_threshold,barcode</code></pre>
+<p>Only <code>name</code> is required. Unknown categories are auto-created as active.
+Blank-name rows (e.g. trailing newlines) are skipped quietly. File cap:
+10 MB, <code>csv</code>/<code>txt</code>.</p>
+<h2 id="report-export">Report Export</h2>
+<p>Download CSV from:</p>
+<pre><code class="language-http">GET /api/v1/reports/export/{type}</code></pre>
+<p>Streams with flat memory regardless of row count. Example:</p>
+<pre><code class="language-http">GET /api/v1/reports/export/low-stock</code></pre>
+<hr />
+<h1 id="changelog">Changelog</h1>
+<h2 id="100-2026-09-19">1.0.0 — 2026-09-19</h2>
+<p>Initial release of AssetArray API.</p>
+<p>Features:</p>
+<ul>
+<li>Sanctum authentication (login/logout/refresh, password reset, profiles)</li>
+<li>Role-based authorisation (policies + <code>manager-or-above</code> / <code>super-admin</code> gates)</li>
+<li>Branch management (super-admin writes, manager assignment)</li>
+<li>Product catalogue (auto SKUs, price history, CSV import)</li>
+<li>Inventory adjustments (row-locked, ledger-backed, low-stock jobs)</li>
+<li>Stock transfers (request → approve → receive / reject)</li>
+<li>Stock takes (open → submit → approve, variance reports)</li>
+<li>Suppliers</li>
+<li>Purchase orders (draft → sent → partial/full receipt, cancel)</li>
+<li>Reports (valuation, movements, low stock, performance, transfers + CSV export)</li>
+<li>In-app notifications (queued listeners, unread workflow)</li>
+<li>Immutable audit logs</li>
+<li>Scribe documentation + workflow guides (<code>docs/</code>)</li>
+<li>PHPUnit tests (smoke + factory regression)</li>
+</ul>
     </div>
     <div class="dark-box">
                     <div class="lang-selector">
