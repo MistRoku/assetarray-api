@@ -2,24 +2,25 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+/**
+ * Root seeder: demo dataset only (see DemoDataSeeder).
+ *
+ * NOTE: no WithoutModelEvents trait on purpose. That trait also silences
+ * nested $this->call() seeders, which would disable model hooks the app
+ * depends on — e.g. Product::booted() SKU generation. Reseeds stay clean
+ * anyway: updateOrCreate() with identical attributes fires no model events.
+ */
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        $this->call([
+            DemoDataSeeder::class,
         ]);
     }
 }
