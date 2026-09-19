@@ -64,7 +64,7 @@ class ApiSmokeTest extends TestCase
             ->assertJsonPath('message', 'Login successful.')
             ->assertJsonStructure(['data' => ['user' => ['id', 'email', 'role'], 'token', 'token_type']]);
 
-        $me = $this->getJson('/api/v1/auth/me', [
+        $me = $this->getJson('/api/v1/auth/profile', [
             'Authorization' => 'Bearer '.$response->json('data.token'),
         ]);
 
@@ -76,7 +76,7 @@ class ApiSmokeTest extends TestCase
         $this->manager->update(['is_active' => false]);
         $token = $this->manager->createToken('smoke')->plainTextToken;
 
-        $this->getJson('/api/v1/auth/me', ['Authorization' => "Bearer {$token}"])
+        $this->getJson('/api/v1/auth/profile', ['Authorization' => "Bearer {$token}"])
             ->assertForbidden()
             ->assertJsonPath('message', 'Account is inactive.');
     }
@@ -132,9 +132,10 @@ class ApiSmokeTest extends TestCase
 
     public function test_login_is_rate_limited(): void
     {
-        // 5 attempts allowed per minute; the 6th must 429 even with
-        // valid credentials — brute-force protection on the public endpoint.
-        for ($i = 0; $i < 5; $i++) {
+        // Login allows 10 attempts per minute (see routes/api.php); the 11th
+        // must 429 even with valid credentials — brute-force protection on
+        // the public endpoint.
+        for ($i = 0; $i < 10; $i++) {
             $this->postJson('/api/v1/auth/login', [
                 'email' => 'mgr@example.com',
                 'password' => 'wrong',

@@ -37,7 +37,8 @@ Route::prefix('v1')->group(function () {
             Route::post('logout', [AuthController::class, 'logout']);
             Route::post('refresh', [AuthController::class, 'refresh']);
             Route::get('profile', [AuthController::class, 'profile']);
-            Route::put('profile', [AuthController::class, 'updateProfile']);
+            // PATCH alongside PUT for partial profile updates.
+            Route::match(['put', 'patch'], 'profile', [AuthController::class, 'updateProfile']);
         });
 
         Route::post('branches/{branch}/manager', [BranchController::class, 'assignManager']);
