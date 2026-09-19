@@ -119,7 +119,9 @@ final class InventoryService
                 newValues: ['quantity' => $newQuantity]
             );
 
-            return $stock->fresh(['product:id,name,sku,min_stock_threshold', 'branch:id,name']);
+            $stock->refresh();
+
+            return $stock->load(['product:id,name,sku,min_stock_threshold', 'branch:id,name']);
         });
     }
 

@@ -107,7 +107,9 @@ final class ProductService
                 newValues: $product->only(array_keys($data))
             );
 
-            return $product->fresh(['category', 'supplier']);
+            $product->refresh();
+
+            return $product->load(['category', 'supplier']);
         });
     }
 

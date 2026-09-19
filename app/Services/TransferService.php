@@ -138,7 +138,10 @@ final class TransferService
                 newValues: ['status' => StockTransfer::STATUS_APPROVED]
             );
 
-            return $transfer->fresh(['product:id,name,sku', 'fromBranch:id,name', 'toBranch:id,name']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $transfer->refresh();
+
+            return $transfer->load(['product:id,name,sku', 'fromBranch:id,name', 'toBranch:id,name']);
         });
     }
 
@@ -169,7 +172,10 @@ final class TransferService
                 newValues: ['status' => StockTransfer::STATUS_REJECTED, 'rejected_reason' => $reason]
             );
 
-            return $transfer->fresh(['product:id,name,sku', 'fromBranch:id,name', 'toBranch:id,name']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $transfer->refresh();
+
+            return $transfer->load(['product:id,name,sku', 'fromBranch:id,name', 'toBranch:id,name']);
         });
     }
 
@@ -228,7 +234,10 @@ final class TransferService
                 newValues: ['status' => StockTransfer::STATUS_RECEIVED]
             );
 
-            return $transfer->fresh(['product:id,name,sku', 'fromBranch:id,name', 'toBranch:id,name']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $transfer->refresh();
+
+            return $transfer->load(['product:id,name,sku', 'fromBranch:id,name', 'toBranch:id,name']);
         });
     }
 

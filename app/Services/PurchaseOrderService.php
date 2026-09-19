@@ -100,7 +100,10 @@ final class PurchaseOrderService
                 newValues: ['status' => PurchaseOrder::STATUS_SENT]
             );
 
-            return $po->fresh(['supplier:id,name', 'branch:id,name', 'items.product:id,name,sku']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $po->refresh();
+
+            return $po->load(['supplier:id,name', 'branch:id,name', 'items.product:id,name,sku']);
         });
     }
 
@@ -208,7 +211,10 @@ final class PurchaseOrderService
                 newValues: ['status' => $status]
             );
 
-            return $po->fresh(['supplier:id,name', 'branch:id,name', 'items.product:id,name,sku']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $po->refresh();
+
+            return $po->load(['supplier:id,name', 'branch:id,name', 'items.product:id,name,sku']);
         });
     }
 
@@ -240,7 +246,10 @@ final class PurchaseOrderService
                 newValues: ['status' => PurchaseOrder::STATUS_CANCELLED]
             );
 
-            return $po->fresh(['supplier:id,name', 'branch:id,name', 'items.product:id,name,sku']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $po->refresh();
+
+            return $po->load(['supplier:id,name', 'branch:id,name', 'items.product:id,name,sku']);
         });
     }
 

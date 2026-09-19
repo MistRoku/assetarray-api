@@ -64,7 +64,11 @@ final class SupplierService
                 newValues: $supplier->only(array_keys($data))
             );
 
-            return $supplier->fresh();
+            // refresh() (not fresh()): fresh() is nullable (?Supplier) while
+            // this method promises Supplier.
+            $supplier->refresh();
+
+            return $supplier;
         });
     }
 

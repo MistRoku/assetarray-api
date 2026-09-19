@@ -14,7 +14,8 @@ use Illuminate\Queue\SerializesModels;
  */
 class TransferRequested
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable;
+    use SerializesModels;
 
     public function __construct(
         public readonly StockTransfer $transfer,

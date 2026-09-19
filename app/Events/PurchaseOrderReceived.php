@@ -14,7 +14,8 @@ use Illuminate\Queue\SerializesModels;
  */
 class PurchaseOrderReceived
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable;
+    use SerializesModels;
 
     public function __construct(
         public readonly PurchaseOrder $purchaseOrder,

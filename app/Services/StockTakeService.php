@@ -123,7 +123,10 @@ final class StockTakeService
                 newValues: ['status' => StockTake::STATUS_SUBMITTED]
             );
 
-            return $stockTake->fresh(['branch:id,name', 'creator:id,name', 'items.product:id,name,sku']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $stockTake->refresh();
+
+            return $stockTake->load(['branch:id,name', 'creator:id,name', 'items.product:id,name,sku']);
         });
     }
 
@@ -199,7 +202,10 @@ final class StockTakeService
                 newValues: ['status' => StockTake::STATUS_APPROVED]
             );
 
-            return $stockTake->fresh(['branch:id,name', 'creator:id,name', 'items.product:id,name,sku']);
+            // refresh()+load() instead of fresh(): fresh() is nullable.
+            $stockTake->refresh();
+
+            return $stockTake->load(['branch:id,name', 'creator:id,name', 'items.product:id,name,sku']);
         });
     }
 

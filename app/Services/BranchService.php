@@ -74,7 +74,12 @@ final class BranchService
                 newValues: $branch->only(array_keys($data))
             );
 
-            return $branch->fresh();
+            // refresh() (not fresh()): reloads in place and returns $this,
+            // while fresh() returns ?Branch — a nullability lie the API
+            // return type can't honor.
+            $branch->refresh();
+
+            return $branch;
         });
     }
 
@@ -127,7 +132,9 @@ final class BranchService
                 newValues: ['branch_id' => $branch->id]
             );
 
-            return $manager->fresh('branch');
+            $manager->refresh();
+
+            return $manager->load('branch');
         });
     }
 }

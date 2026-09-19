@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="assetarray-api">
+    <description>
+        PSR-12 aligned with Pint (Laravel preset), which is the
+        authoritative formatter — `vendor/bin/pint --test` must pass.
+        Sniffs that contradict Pint are excluded below (with reasons),
+        so editor integrations (e.g. Zed's phpcs) agree with CI.
+    </description>
+
+    <file>app</file>
+    <file>config</file>
+    <file>database</file>
+    <file>routes</file>
+    <file>tests</file>
+
+    <!-- Generated / third-party code is never linted. _ide_helper.php in
+         particular is large enough to exhaust linters and flood diagnostics. -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/storage/*</exclude-pattern>
+    <exclude-pattern>*/bootstrap/cache/*</exclude-pattern>
+    <exclude-pattern>*/public/*</exclude-pattern>
+    <exclude-pattern>_ide_helper*.php</exclude-pattern>
+    <exclude-pattern>.phpstorm.meta.php</exclude-pattern>
+
+    <rule ref="PSR12">
+        <!-- Pint mandates `'a'.'b'` (no spaces around concatenation). -->
+        <exclude name="PSR12.Operators.OperatorSpacing"/>
+        <!-- Pint mandates collapsed empty bodies `) {}`. -->
+        <exclude name="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore"/>
+        <!-- Informational only; Pint sets 120 cols and no maximum. -->
+        <exclude name="Generic.Files.LineLength"/>
+        <!-- PHPUnit convention is snake_case test names. -->
+        <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+    </rule>
+</ruleset>
