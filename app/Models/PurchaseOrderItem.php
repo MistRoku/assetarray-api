@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * quantity_received grows incrementally via receiveGoods() until it equals
  * quantity_ordered; over-receiving is rejected per line.
+ *
+ * @mixin IdeHelperPurchaseOrderItem
  */
 class PurchaseOrderItem extends Model
 {

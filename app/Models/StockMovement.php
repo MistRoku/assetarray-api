@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * outbound (sale, transfer_out). reference_type/reference_id is a polymorphic
  * pointer to the source (e.g. StockTransfer, PurchaseOrderItem, StockLevel).
  * Rows are never edited — corrections are new adjustment rows.
+ *
+ * @mixin IdeHelperStockMovement
  */
 class StockMovement extends Model
 {

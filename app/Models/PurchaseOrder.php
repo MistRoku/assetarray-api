@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * Lifecycle: draft → sent → partially_received → received (or cancelled).
  * Receiving is incremental per line item — see PurchaseOrderService.
  * The po_number is auto-generated on create when left blank.
+ *
+ * @mixin IdeHelperPurchaseOrder
  */
 class PurchaseOrder extends Model
 {

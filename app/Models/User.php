@@ -16,6 +16,8 @@ use Laravel\Sanctum\HasApiTokens;
  * Roles (super_admin > branch_manager > staff) drive policies and the
  * isManagerOrAbove() gate used across inventory requests. The password
  * 'hashed' cast means services must assign plain text — never Hash::make().
+ *
+ * @mixin IdeHelperUser
  */
 class User extends Authenticatable
 {

@@ -16,6 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * The SKU is auto-generated on create (see booted()) when left blank, and
  * is globally unique including soft-deleted rows so SKUs are never recycled.
  * Prices use decimal:2 casts — never floats — to avoid rounding drift.
+ *
+ * @mixin IdeHelperProduct
  */
 class Product extends Model
 {

@@ -5,6 +5,11 @@ parameters:
     paths:
         - app
 
+    # Makes the IdeHelper* mixin classes (used by model @mixin tags)
+    # discoverable. Regenerate via: php artisan ide-helper:models --write-mixin
+    scanFiles:
+        - _ide_helper_models.php
+
     # Laravel default; level max is intentionally not used (Eloquent magic
     # requires Larastan stubs, and max flags generic noise, not real bugs).
     level: 5

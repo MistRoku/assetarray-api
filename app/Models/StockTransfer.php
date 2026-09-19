@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * Lifecycle: pending → approved → received (or rejected). Source stock is
  * decremented at approval, destination incremented at receipt — never both
  * at once, so in-flight quantity is never double-counted. See TransferService.
+ *
+ * @mixin IdeHelperStockTransfer
  */
 class StockTransfer extends Model
 {

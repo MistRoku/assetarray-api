@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * Lifecycle: open → submitted → approved (or cancelled). Approval writes the
  * counted quantities back to stock levels and emits adjustment movements.
  * See StockTakeService.
+ *
+ * @mixin IdeHelperStockTake
  */
 class StockTake extends Model
 {

@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * Unread = read_at null. Bulk reads use a direct update (see
  * NotificationService::markAllRead) to avoid N model events.
+ *
+ * @mixin IdeHelperNotification
  */
 class Notification extends Model
 {

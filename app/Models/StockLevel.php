@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * Unique per (product_id, branch_id). All writes go through services with
  * lockForUpdate() — never update quantity directly, to avoid lost updates.
+ *
+ * @mixin IdeHelperStockLevel
  */
 class StockLevel extends Model
 {

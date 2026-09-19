@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * Append-only record of a product price change.
  *
  * Uses changed_at (not created_at/updated_at) as the event timestamp.
+ *
+ * @mixin IdeHelperProductPriceHistory
  */
 class ProductPriceHistory extends Model
 {

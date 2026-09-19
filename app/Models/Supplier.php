@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Goods supplier. Soft-deleted so purchase-order history keeps its source.
+ *
+ * @mixin IdeHelperSupplier
  */
 class Supplier extends Model
 {

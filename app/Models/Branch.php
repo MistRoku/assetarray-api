@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Branches own stock levels, transfers, purchase orders and stock takes.
  * Soft-deleted so history (movements, audit logs) survives deactivation.
  * Deactivation also flips is_active=false — see BranchService::deactivate().
+ *
+ * @mixin IdeHelperBranch
  */
 class Branch extends Model
 {

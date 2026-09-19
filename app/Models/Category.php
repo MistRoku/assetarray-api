@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Product grouping. Name and slug are globally unique.
+ *
+ * @mixin IdeHelperCategory
  */
 class Category extends Model
 {

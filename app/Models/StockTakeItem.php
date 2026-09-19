@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  *
  * variance = counted_quantity - system_quantity (computed at submit time).
  * Unique per (stock_take_id, product_id).
+ *
+ * @mixin IdeHelperStockTakeItem
  */
 class StockTakeItem extends Model
 {

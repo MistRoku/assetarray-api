@@ -12,6 +12,8 @@ use RuntimeException;
  *
  * Timestamps are managed manually (single created_at) and updates/deletes
  * throw — history can only ever be appended. Write via AuditLogService.
+ *
+ * @mixin IdeHelperAuditLog
  */
 class AuditLog extends Model
 {
