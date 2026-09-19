@@ -7,8 +7,8 @@ use RuntimeException;
 
 /**
  * Enforces the append-only ledger: movements are never edited or removed.
- * Corrections are new adjustment rows (see InventoryService). Registered
- * via #[ObservedBy] on the StockMovement model.
+ * Corrections are new adjustment rows (see InventoryService). Registered in
+ * AppServiceProvider.
  */
 class StockMovementObserver
 {

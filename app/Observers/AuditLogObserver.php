@@ -9,7 +9,7 @@ use RuntimeException;
  * Single enforcement point for audit immutability: history can only ever
  * be appended, not rewritten — even by admins through Eloquent. (This
  * replaces the model-level booted() guards so the rule lives in exactly
- * one place.) Registered via #[ObservedBy] on the AuditLog model.
+ * one place.) Registered in AppServiceProvider.
  */
 class AuditLogObserver
 {

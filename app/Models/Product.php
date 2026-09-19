@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-use App\Observers\ProductObserver;
 use App\Support\SkuGenerator;
-use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -22,7 +20,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @mixin IdeHelperProduct
  */
-#[ObservedBy(ProductObserver::class)]
 class Product extends Model
 {
     use HasFactory;

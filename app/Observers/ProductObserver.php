@@ -10,8 +10,9 @@ use App\Models\ProductPriceHistory;
  *
  * Only fires when cost or selling price actually changed (isDirty guard), so
  * name/stock edits don't spam the history table. Partial changes record
- * only the changed side — the other pair stays null. Registered via
- * #[ObservedBy] on the Product model.
+ * only the changed side — the other pair stays null. Registered in
+ * AppServiceProvider (the ONLY registration — a second one, e.g.
+ * #[ObservedBy], would journal every change twice).
  */
 class ProductObserver
 {
