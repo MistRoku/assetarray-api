@@ -11,81 +11,93 @@ use App\Http\Controllers\Api\V1\ReportController;
 use App\Http\Controllers\Api\V1\StockTakeController;
 use App\Http\Controllers\Api\V1\StockTransferController;
 use App\Http\Controllers\Api\V1\SupplierController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Legacy Sanctum sample route — kept for reference.
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
+Route::prefix('v1')->group(function () {
 
-// Versioned API. Everything below lives under /api/v1/... Auth-sensitive
-// routes sit behind auth:sanctum + the active-account gate; per-action
-// authorization additionally happens in FormRequests, policies and gates.
-Route::prefix('v1')->group(function (): void {
-    // Public: login + password reset (rate-limit friendly, no auth yet).
-    Route::post('auth/login', [AuthController::class, 'login']);
-    Route::post('auth/forgot-password', [AuthController::class, 'forgotPassword']);
-    Route::post('auth/reset-password', [AuthController::class, 'resetPassword']);
+    /*
+    |--------------------------------------------------------------------------
+    | Public Authentication Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::prefix('auth')->group(function () {
+        Route::post('login', [AuthController::class, 'login'])->middleware('throttle:10,1');
+        Route::post('forgot-password', [AuthController::class, 'forgotPassword'])->middleware('throttle:5,1');
+        Route::post('reset-password', [AuthController::class, 'resetPassword'])->middleware('throttle:10,1');
+    });
 
-    Route::middleware(['auth:sanctum', 'active'])->group(function (): void {
-        // Auth self-service.
-        Route::post('auth/logout', [AuthController::class, 'logout']);
-        Route::post('auth/refresh', [AuthController::class, 'refresh']);
-        Route::get('auth/me', [AuthController::class, 'profile']);
-        Route::put('auth/me', [AuthController::class, 'updateProfile']);
+    /*
+    |--------------------------------------------------------------------------
+    | Protected Routes
+    |--------------------------------------------------------------------------
+    */
+    Route::middleware(['auth:sanctum', 'active'])->group(function () {
 
-        // Branches (writes are super-admin only — see BranchPolicy).
-        Route::apiResource('branches', BranchController::class)->except(['update']);
-        Route::put('branches/{branch}', [BranchController::class, 'update']);
+        Route::prefix('auth')->group(function () {
+            Route::post('logout', [AuthController::class, 'logout']);
+            Route::post('refresh', [AuthController::class, 'refresh']);
+            Route::get('profile', [AuthController::class, 'profile']);
+            Route::put('profile', [AuthController::class, 'updateProfile']);
+        });
+
         Route::post('branches/{branch}/manager', [BranchController::class, 'assignManager']);
+        Route::apiResource('branches', BranchController::class);
 
-        // Products catalogue + CSV import + price history.
         Route::post('products/import', [ProductController::class, 'import']);
         Route::get('products/{product}/price-history', [ProductController::class, 'priceHistory']);
         Route::apiResource('products', ProductController::class);
 
-        // Inventory levels, adjustments and the movement ledger.
-        Route::get('inventory', [InventoryController::class, 'index']);
-        Route::post('inventory/adjust', [InventoryController::class, 'adjust']);
-        Route::get('inventory/movements', [InventoryController::class, 'movements']);
+        Route::prefix('inventory')->group(function () {
+            Route::get('/', [InventoryController::class, 'index']);
+            Route::post('adjust', [InventoryController::class, 'adjust']);
+            Route::get('movements', [InventoryController::class, 'movements']);
 
-        // Transfers: request → approve/reject → receive (no update/delete).
-        Route::apiResource('transfers', StockTransferController::class)->only(['index', 'show', 'store']);
-        Route::post('transfers/{transfer}/approve', [StockTransferController::class, 'approve']);
-        Route::post('transfers/{transfer}/reject', [StockTransferController::class, 'reject']);
-        Route::post('transfers/{transfer}/receive', [StockTransferController::class, 'receive']);
+            Route::prefix('transfers')->group(function () {
+                Route::get('/', [StockTransferController::class, 'index']);
+                Route::post('/', [StockTransferController::class, 'store']);
+                Route::get('{transfer}', [StockTransferController::class, 'show']);
+                Route::put('{transfer}/approve', [StockTransferController::class, 'approve']);
+                Route::put('{transfer}/reject', [StockTransferController::class, 'reject']);
+                Route::put('{transfer}/receive', [StockTransferController::class, 'receive']);
+            });
 
-        // Stock takes: open → submit counts → approve, plus variance view.
-        Route::apiResource('stock-takes', StockTakeController::class)->only(['index', 'show', 'store']);
-        Route::post('stock-takes/{stockTake}/counts', [StockTakeController::class, 'submitCounts']);
-        Route::post('stock-takes/{stockTake}/approve', [StockTakeController::class, 'approve']);
-        Route::get('stock-takes/{stockTake}/variance', [StockTakeController::class, 'varianceReport']);
+            Route::prefix('stock-take')->group(function () {
+                Route::get('/', [StockTakeController::class, 'index']);
+                Route::post('/', [StockTakeController::class, 'store']);
+                Route::get('{stockTake}', [StockTakeController::class, 'show']);
+                Route::put('{stockTake}/items', [StockTakeController::class, 'submitCounts']);
+                Route::put('{stockTake}/approve', [StockTakeController::class, 'approve']);
+                Route::get('{stockTake}/variance-report', [StockTakeController::class, 'varianceReport']);
+            });
+        });
 
-        // Suppliers.
         Route::apiResource('suppliers', SupplierController::class);
 
-        // Purchase orders: draft → send → receive[] → received, or cancel.
-        Route::apiResource('purchase-orders', PurchaseOrderController::class)->only(['index', 'show', 'store']);
-        Route::post('purchase-orders/{purchaseOrder}/send', [PurchaseOrderController::class, 'send']);
-        Route::post('purchase-orders/{purchaseOrder}/receive', [PurchaseOrderController::class, 'receive']);
-        Route::post('purchase-orders/{purchaseOrder}/cancel', [PurchaseOrderController::class, 'cancel']);
+        Route::prefix('purchase-orders')->group(function () {
+            Route::get('/', [PurchaseOrderController::class, 'index']);
+            Route::post('/', [PurchaseOrderController::class, 'store']);
+            Route::get('{purchaseOrder}', [PurchaseOrderController::class, 'show']);
+            Route::put('{purchaseOrder}/send', [PurchaseOrderController::class, 'send']);
+            Route::post('{purchaseOrder}/receive', [PurchaseOrderController::class, 'receive']);
+            Route::put('{purchaseOrder}/cancel', [PurchaseOrderController::class, 'cancel']);
+        });
 
-        // Read-only reports + CSV exports (manager-or-above gate).
-        Route::get('reports/inventory-valuation', [ReportController::class, 'inventoryValuation']);
-        Route::get('reports/stock-movements', [ReportController::class, 'stockMovements']);
-        Route::get('reports/low-stock', [ReportController::class, 'lowStock']);
-        Route::get('reports/product-performance', [ReportController::class, 'productPerformance']);
-        Route::get('reports/transfers', [ReportController::class, 'transfers']);
-        Route::get('reports/export/{type}', [ReportController::class, 'export']);
+        Route::prefix('reports')->group(function () {
+            Route::get('inventory-valuation', [ReportController::class, 'inventoryValuation']);
+            Route::get('stock-movements', [ReportController::class, 'stockMovements']);
+            Route::get('low-stock', [ReportController::class, 'lowStock']);
+            Route::get('product-performance', [ReportController::class, 'productPerformance']);
+            Route::get('transfers', [ReportController::class, 'transfers']);
+            Route::get('export/{type}', [ReportController::class, 'export']);
+        });
 
-        // Own inbox only — no cross-user listing exists by design.
-        Route::get('notifications', [NotificationController::class, 'index']);
-        Route::get('notifications/unread-count', [NotificationController::class, 'unreadCount']);
-        Route::post('notifications/{notification}/read', [NotificationController::class, 'markRead']);
-        Route::post('notifications/read-all', [NotificationController::class, 'markAllRead']);
+        Route::prefix('notifications')->group(function () {
+            Route::get('/', [NotificationController::class, 'index']);
+            Route::get('unread-count', [NotificationController::class, 'unreadCount']);
+            Route::put('read-all', [NotificationController::class, 'markAllRead']);
+            Route::put('{notification}/read', [NotificationController::class, 'markRead']);
+        });
 
-        // Immutable audit trail (super-admin gate).
         Route::get('audit-logs', [AuditLogController::class, 'index']);
     });
 });
