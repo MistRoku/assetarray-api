@@ -17,6 +17,19 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->enum('role', [
+                'super_admin',
+                'branch_manager',
+                'staff',
+            ])->default('staff');
+
+            // branch_id is added here without FK because branches table does not exist yet.
+            $table->unsignedBigInteger('branch_id')->nullable()->index();
+
+            $table->boolean('is_active')->default(true);
+            $table->timestamp('last_login_at')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
         });
