@@ -85,7 +85,7 @@ class Product extends Model
 
         return $query->where(function (Builder $q) use ($term): void {
             $q->where('name', 'like', "%{$term}%")
-              ->orWhere('sku', 'like', "%{$term}%");
+                ->orWhere('sku', 'like', "%{$term}%");
         });
     }
 
