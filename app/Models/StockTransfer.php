@@ -2,9 +2,60 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class StockTransfer extends Model
 {
-    //
+    use HasFactory;
+
+    public const STATUS_PENDING = 'pending';
+    public const STATUS_APPROVED = 'approved';
+    public const STATUS_IN_TRANSIT = 'in_transit';
+    public const STATUS_RECEIVED = 'received';
+    public const STATUS_REJECTED = 'rejected';
+
+    protected $fillable = [
+        'transfer_code',
+        'from_branch_id',
+        'to_branch_id',
+        'product_id',
+        'quantity',
+        'status',
+        'requested_by',
+        'approved_by',
+        'rejected_reason',
+        'transferred_at',
+    ];
+
+    protected $casts = [
+        'quantity' => 'integer',
+        'transferred_at' => 'datetime',
+    ];
+
+    public function fromBranch(): BelongsTo
+    {
+        return $this->belongsTo(Branch::class, 'from_branch_id');
+    }
+
+    public function toBranch(): BelongsTo
+    {
+        return $this->belongsTo(Branch::class, 'to_branch_id');
+    }
+
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function requestedBy(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'requested_by');
+    }
+
+    public function approvedBy(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'approved_by');
+    }
 }
