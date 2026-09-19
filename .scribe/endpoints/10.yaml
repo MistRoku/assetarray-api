@@ -1,0 +1,109 @@
+name: 'Audit Logs'
+description: |-
+
+  Read-only window into the immutable audit trail. Super-admin only — rows
+  contain before/after snapshots that may include sensitive values.
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/audit-logs
+    metadata:
+      custom: []
+      groupName: 'Audit Logs'
+      groupDescription: |-
+
+        Read-only window into the immutable audit trail. Super-admin only — rows
+        contain before/after snapshots that may include sensitive values.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List audit logs'
+      description: 'Newest first. All filters are optional and combine with AND.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      entity_type:
+        custom: []
+        name: entity_type
+        description: 'Filter by entity class.'
+        required: false
+        example: App\Models\Product
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      entity_id:
+        custom: []
+        name: entity_id
+        description: 'Filter by entity ID.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      user_id:
+        custom: []
+        name: user_id
+        description: 'Filter by user ID.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      from:
+        custom: []
+        name: from
+        description: 'Date from.'
+        required: false
+        example: '2026-01-01'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      to:
+        custom: []
+        name: to
+        description: 'Date to.'
+        required: false
+        example: '2026-12-31'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      entity_type: App\Models\Product
+      entity_id: '1'
+      user_id: '1'
+      from: '2026-01-01'
+      to: '2026-12-31'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

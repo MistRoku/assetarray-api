@@ -18,10 +18,15 @@ return [
 
     // Text to place in the "Introduction" section, right after the `description`. Markdown and HTML are supported.
     'intro_text' => <<<'INTRO'
-            This documentation aims to provide all the information you need to work with our API.
+            AssetArray API — multi-branch inventory management. Grab a token via `POST /api/v1/auth/login`
+            (demo: manager@assetarray.test / password), then pass `Authorization: Bearer YOUR_TOKEN`.
 
-            <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
-            You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+            <aside>Workflow guides (transfers, stock takes, purchase orders, reports, notifications, audit trail
+            and more) live in the <code>docs/</code> folder at the repo root — start at
+            <code>docs/01-introduction.md</code>.</aside>
+
+            As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+            You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).
         INTRO,
 
     // The base URL displayed in the docs.

@@ -1,0 +1,493 @@
+name: Branches
+description: |-
+
+  Manage physical or logical branches. All writes are super-admin only
+  (see BranchPolicy) — managers run branches, they don't reshape the org.
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/v1/branches/{branch_id}/manager'
+    metadata:
+      custom: []
+      groupName: Branches
+      groupDescription: |-
+
+        Manage physical or logical branches. All writes are super-admin only
+        (see BranchPolicy) — managers run branches, they don't reshape the org.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Assign manager to branch'
+      description: |-
+        Returns both sides of the assignment. The manager is wrapped in
+        UserResource (never a bare model) so no internal fields leak.
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      branch_id:
+        custom: []
+        name: branch_id
+        description: 'The ID of the branch.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      branch_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_id:
+        custom: []
+        name: user_id
+        description: 'The branch manager user ID.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      user_id: 2
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/branches
+    metadata:
+      custom: []
+      groupName: Branches
+      groupDescription: |-
+
+        Manage physical or logical branches. All writes are super-admin only
+        (see BranchPolicy) — managers run branches, they don't reshape the org.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List branches'
+      description: ''
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      search:
+        custom: []
+        name: search
+        description: 'Search by branch name or code.'
+        required: false
+        example: Main
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      is_active:
+        custom: []
+        name: is_active
+        description: 'Filter by active status.'
+        required: false
+        example: 'true'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      per_page:
+        custom: []
+        name: per_page
+        description: 'Results per page.'
+        required: false
+        example: 15
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      search: Main
+      is_active: 'true'
+      per_page: 15
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/branches
+    metadata:
+      custom: []
+      groupName: Branches
+      groupDescription: |-
+
+        Manage physical or logical branches. All writes are super-admin only
+        (see BranchPolicy) — managers run branches, they don't reshape the org.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create branch'
+      description: 'Super-admin only (policy + StoreBranchRequest).'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      code:
+        custom: []
+        name: code
+        description: 'Must not be greater than 10 characters.'
+        required: true
+        example: ngzmiy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      address:
+        custom: []
+        name: address
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      phone:
+        custom: []
+        name: phone
+        description: 'Must not be greater than 20 characters.'
+        required: false
+        example: ngzmiyvdljnikhwa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      tax_rate:
+        custom: []
+        name: tax_rate
+        description: 'Must be at least 0. Must not be greater than 100.'
+        required: false
+        example: 24
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      operating_hours:
+        custom: []
+        name: operating_hours
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_active:
+        custom: []
+        name: is_active
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      code: ngzmiy
+      address: architecto
+      phone: ngzmiyvdljnikhwa
+      tax_rate: 24
+      is_active: false
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/branches/{id}'
+    metadata:
+      custom: []
+      groupName: Branches
+      groupDescription: |-
+
+        Manage physical or logical branches. All writes are super-admin only
+        (see BranchPolicy) — managers run branches, they don't reshape the org.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show branch'
+      description: 'Includes the user count (staff_count) via loadCount.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the branch.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/branches/{id}'
+    metadata:
+      custom: []
+      groupName: Branches
+      groupDescription: |-
+
+        Manage physical or logical branches. All writes are super-admin only
+        (see BranchPolicy) — managers run branches, they don't reshape the org.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update branch'
+      description: 'Super-admin only (policy + UpdateBranchRequest).'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the branch.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      code:
+        custom: []
+        name: code
+        description: 'Must not be greater than 10 characters.'
+        required: false
+        example: ngzmiy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      address:
+        custom: []
+        name: address
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      phone:
+        custom: []
+        name: phone
+        description: 'Must not be greater than 20 characters.'
+        required: false
+        example: ngzmiyvdljnikhwa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      tax_rate:
+        custom: []
+        name: tax_rate
+        description: 'Must be at least 0. Must not be greater than 100.'
+        required: false
+        example: 24
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      operating_hours:
+        custom: []
+        name: operating_hours
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_active:
+        custom: []
+        name: is_active
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      code: ngzmiy
+      address: architecto
+      phone: ngzmiyvdljnikhwa
+      tax_rate: 24
+      is_active: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/branches/{id}'
+    metadata:
+      custom: []
+      groupName: Branches
+      groupDescription: |-
+
+        Manage physical or logical branches. All writes are super-admin only
+        (see BranchPolicy) — managers run branches, they don't reshape the org.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Deactivate branch'
+      description: 'Soft-deletes after flipping is_active — history keeps working.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the branch.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

@@ -1,0 +1,655 @@
+name: Products
+description: |-
+
+  Manage the product and asset catalogue.
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/products/import
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Bulk CSV import products'
+      description: |-
+        Queued — returns 202 immediately, rows are processed by
+        ProcessProductCsvImportJob. Per-row failures are logged, not fatal.
+
+        Expected CSV headers:
+        name, category, description, cost_price, selling_price, min_stock_threshold, barcode
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      file:
+        custom: []
+        name: file
+        description: 'Must be a file. Must not be greater than 10240 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters: []
+    fileParameters:
+      file: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/products/{product_id}/price-history'
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Product price history'
+      description: 'Manager-only: exposes cost prices (see ProductPolicy).'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      product_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/products
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List products'
+      description: |-
+        Branch scoping changes the stock filters: with branch_id they (and the
+        eager-loaded stock levels) apply to that branch only.
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      search:
+        custom: []
+        name: search
+        description: 'Search by name or SKU.'
+        required: false
+        example: keyboard
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      category_id:
+        custom: []
+        name: category_id
+        description: 'Filter by category ID.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      branch_id:
+        custom: []
+        name: branch_id
+        description: 'Filter by branch stock.'
+        required: false
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      stock_status:
+        custom: []
+        name: stock_status
+        description: 'in_stock, low_stock, out_of_stock.'
+        required: false
+        example: low_stock
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+      per_page:
+        custom: []
+        name: per_page
+        description: 'Results per page.'
+        required: false
+        example: 15
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      search: keyboard
+      category_id: '1'
+      branch_id: '1'
+      stock_status: low_stock
+      per_page: 15
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/products
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create product'
+      description: 'The SKU is auto-generated when omitted (see Product::booted()).'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      category_id:
+        custom: []
+        name: category_id
+        description: 'Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      supplier_id:
+        custom: []
+        name: supplier_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      cost_price:
+        custom: []
+        name: cost_price
+        description: 'Must be at least 0.'
+        required: true
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      selling_price:
+        custom: []
+        name: selling_price
+        description: 'Must be at least 0.'
+        required: true
+        example: 84
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      tax_rate_override:
+        custom: []
+        name: tax_rate_override
+        description: 'Must be at least 0. Must not be greater than 100.'
+        required: false
+        example: 16
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      barcode:
+        custom: []
+        name: barcode
+        description: 'Must not be greater than 100 characters.'
+        required: false
+        example: m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      image_url:
+        custom: []
+        name: image_url
+        description: 'Must be a valid URL. Must not be greater than 500 characters.'
+        required: false
+        example: 'https://www.gulgowski.com/nihil-accusantium-harum-mollitia-modi-deserunt'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      min_stock_threshold:
+        custom: []
+        name: min_stock_threshold
+        description: 'Must be at least 0.'
+        required: false
+        example: 87
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_active:
+        custom: []
+        name: is_active
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      description: 'Eius et animi quos velit et.'
+      category_id: 16
+      supplier_id: 16
+      cost_price: 39
+      selling_price: 84
+      tax_rate_override: 16
+      barcode: m
+      image_url: 'https://www.gulgowski.com/nihil-accusantium-harum-mollitia-modi-deserunt'
+      min_stock_threshold: 87
+      is_active: true
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/products/{id}'
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show product'
+      description: 'Includes category, supplier and per-branch stock (with branch names).'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/products/{id}'
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update product'
+      description: 'Price changes are journaled automatically by ProductObserver.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: ''
+        required: false
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      category_id:
+        custom: []
+        name: category_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      supplier_id:
+        custom: []
+        name: supplier_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      cost_price:
+        custom: []
+        name: cost_price
+        description: 'Must be at least 0.'
+        required: false
+        example: 39
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      selling_price:
+        custom: []
+        name: selling_price
+        description: 'Must be at least 0.'
+        required: false
+        example: 84
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      tax_rate_override:
+        custom: []
+        name: tax_rate_override
+        description: 'Must be at least 0. Must not be greater than 100.'
+        required: false
+        example: 16
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      barcode:
+        custom: []
+        name: barcode
+        description: 'Must not be greater than 100 characters.'
+        required: false
+        example: m
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      image_url:
+        custom: []
+        name: image_url
+        description: 'Must be a valid URL. Must not be greater than 500 characters.'
+        required: false
+        example: 'https://www.gulgowski.com/nihil-accusantium-harum-mollitia-modi-deserunt'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      min_stock_threshold:
+        custom: []
+        name: min_stock_threshold
+        description: 'Must be at least 0.'
+        required: false
+        example: 87
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      is_active:
+        custom: []
+        name: is_active
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      description: 'Eius et animi quos velit et.'
+      category_id: 16
+      supplier_id: 16
+      cost_price: 39
+      selling_price: 84
+      tax_rate_override: 16
+      barcode: m
+      image_url: 'https://www.gulgowski.com/nihil-accusantium-harum-mollitia-modi-deserunt'
+      min_stock_threshold: 87
+      is_active: false
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/products/{id}'
+    metadata:
+      custom: []
+      groupName: Products
+      groupDescription: |-
+
+        Manage the product and asset catalogue.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Soft delete product'
+      description: "The SKU stays reserved (withTrashed uniqueness) so it can't be recycled."
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null

@@ -1,0 +1,349 @@
+name: 'Stock Transfers'
+description: |-
+
+  Branch-to-branch transfer workflow: request → approve/reject → receive.
+  Approval rights sit with the destination branch's manager (see
+  StockTransferPolicy) — the receiver accepts the stock.
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/inventory/transfers
+    metadata:
+      custom: []
+      groupName: 'Stock Transfers'
+      groupDescription: |-
+
+        Branch-to-branch transfer workflow: request → approve/reject → receive.
+        Approval rights sit with the destination branch's manager (see
+        StockTransferPolicy) — the receiver accepts the stock.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List transfers'
+      description: "Supports the service's status/branch/date filters via query string."
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/inventory/transfers
+    metadata:
+      custom: []
+      groupName: 'Stock Transfers'
+      groupDescription: |-
+
+        Branch-to-branch transfer workflow: request → approve/reject → receive.
+        Approval rights sit with the destination branch's manager (see
+        StockTransferPolicy) — the receiver accepts the stock.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create transfer request'
+      description: |-
+        Reserves nothing yet — source stock is re-checked and decremented at
+        approval time, so request against live availability.
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        custom: []
+        name: product_id
+        description: 'Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      from_branch_id:
+        custom: []
+        name: from_branch_id
+        description: 'Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      to_branch_id:
+        custom: []
+        name: to_branch_id
+        description: 'The value and <code>from_branch_id</code> must be different. Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      quantity:
+        custom: []
+        name: quantity
+        description: 'Must be at least 1.'
+        required: true
+        example: 22
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      product_id: 16
+      from_branch_id: 16
+      to_branch_id: 16
+      quantity: 22
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/inventory/transfers/{transfer_id}'
+    metadata:
+      custom: []
+      groupName: 'Stock Transfers'
+      groupDescription: |-
+
+        Branch-to-branch transfer workflow: request → approve/reject → receive.
+        Approval rights sit with the destination branch's manager (see
+        StockTransferPolicy) — the receiver accepts the stock.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show transfer'
+      description: 'Includes requester/approver names for the approval trail.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      transfer_id:
+        custom: []
+        name: transfer_id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      transfer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: 'api/v1/inventory/transfers/{transfer_id}/approve'
+    metadata:
+      custom: []
+      groupName: 'Stock Transfers'
+      groupDescription: |-
+
+        Branch-to-branch transfer workflow: request → approve/reject → receive.
+        Approval rights sit with the destination branch's manager (see
+        StockTransferPolicy) — the receiver accepts the stock.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Approve transfer'
+      description: |-
+        Decrements the source branch. Rejects when source stock dropped below
+        the requested quantity since the request was created.
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      transfer_id:
+        custom: []
+        name: transfer_id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      transfer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: 'api/v1/inventory/transfers/{transfer_id}/reject'
+    metadata:
+      custom: []
+      groupName: 'Stock Transfers'
+      groupDescription: |-
+
+        Branch-to-branch transfer workflow: request → approve/reject → receive.
+        Approval rights sit with the destination branch's manager (see
+        StockTransferPolicy) — the receiver accepts the stock.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Reject transfer'
+      description: 'Terminal state, no stock moves. The reason is stored for the audit trail.'
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      transfer_id:
+        custom: []
+        name: transfer_id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      transfer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      reason:
+        custom: []
+        name: reason
+        description: 'Rejection reason.'
+        required: true
+        example: 'Incorrect destination branch'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      reason: 'Incorrect destination branch'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PUT
+    uri: 'api/v1/inventory/transfers/{transfer_id}/receive'
+    metadata:
+      custom: []
+      groupName: 'Stock Transfers'
+      groupDescription: |-
+
+        Branch-to-branch transfer workflow: request → approve/reject → receive.
+        Approval rights sit with the destination branch's manager (see
+        StockTransferPolicy) — the receiver accepts the stock.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Receive transfer'
+      description: |-
+        Increments the destination branch and closes the transfer. Creates the
+        destination stock level on first receipt.
+      authenticated: false
+      deprecated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      transfer_id:
+        custom: []
+        name: transfer_id
+        description: 'The ID of the transfer.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      transfer_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
