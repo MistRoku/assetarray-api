@@ -42,16 +42,19 @@ class StockTake extends Model
         });
     }
 
+    /** @return BelongsTo<Branch, $this> */
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
     }
 
+    /** @return BelongsTo<User, $this> */
     public function creator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
     }
 
+    /** @return HasMany<StockTakeItem, $this> */
     public function items(): HasMany
     {
         return $this->hasMany(StockTakeItem::class);

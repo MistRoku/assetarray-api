@@ -25,11 +25,13 @@ class StockTakeItem extends Model
         'variance' => 'integer',
     ];
 
+    /** @return BelongsTo<StockTake, $this> */
     public function stockTake(): BelongsTo
     {
         return $this->belongsTo(StockTake::class);
     }
 
+    /** @return BelongsTo<Product, $this> */
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

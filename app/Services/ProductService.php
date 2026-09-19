@@ -6,6 +6,7 @@ use App\Jobs\ProcessProductCsvImportJob;
 use App\Models\Product;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 
@@ -28,7 +29,7 @@ final class ProductService
             });
 
         if ($branchId) {
-            $query->with(['stockLevels' => fn (Builder $q): Builder => $q->where('branch_id', $branchId)]);
+            $query->with(['stockLevels' => fn (Relation $q): Relation => $q->where('branch_id', $branchId)]);
         }
 
         $stockStatus = $filters['stock_status'] ?? null;

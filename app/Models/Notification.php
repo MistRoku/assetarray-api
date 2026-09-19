@@ -25,11 +25,13 @@ class Notification extends Model
         'read_at' => 'datetime',
     ];
 
+    /** @return BelongsTo<User, $this> */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
+    /** @param Builder<Notification> $query @return Builder<Notification> */
     public function scopeUnread(Builder $query): Builder
     {
         return $query->whereNull('read_at');

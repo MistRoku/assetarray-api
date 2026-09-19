@@ -25,11 +25,13 @@ class Supplier extends Model
         'is_active' => 'boolean',
     ];
 
+    /** @return HasMany<Product, $this> */
     public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }
 
+    /** @return HasMany<PurchaseOrder, $this> */
     public function purchaseOrders(): HasMany
     {
         return $this->hasMany(PurchaseOrder::class);

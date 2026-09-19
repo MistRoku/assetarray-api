@@ -47,36 +47,43 @@ class Product extends Model
         });
     }
 
+    /** @return BelongsTo<Category, $this> */
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
+    /** @return BelongsTo<Supplier, $this> */
     public function supplier(): BelongsTo
     {
         return $this->belongsTo(Supplier::class);
     }
 
+    /** @return HasMany<StockLevel, $this> */
     public function stockLevels(): HasMany
     {
         return $this->hasMany(StockLevel::class);
     }
 
+    /** @return HasMany<StockMovement, $this> */
     public function stockMovements(): HasMany
     {
         return $this->hasMany(StockMovement::class);
     }
 
+    /** @return HasMany<ProductPriceHistory, $this> */
     public function priceHistories(): HasMany
     {
         return $this->hasMany(ProductPriceHistory::class);
     }
 
+    /** @return HasMany<PurchaseOrderItem, $this> */
     public function purchaseOrderItems(): HasMany
     {
         return $this->hasMany(PurchaseOrderItem::class);
     }
 
+    /** @param Builder<Product> $query @return Builder<Product> */
     public function scopeSearch(Builder $query, ?string $term): Builder
     {
         if (! $term) {
@@ -89,6 +96,7 @@ class Product extends Model
         });
     }
 
+    /** @param Builder<Product> $query @return Builder<Product> */
     public function scopeActive(Builder $query): Builder
     {
         return $query->where('is_active', true);

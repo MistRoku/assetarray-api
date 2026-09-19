@@ -1,0 +1,14 @@
+includes:
+    - vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+
+    # Laravel default; level max is intentionally not used (Eloquent magic
+    # requires Larastan stubs, and max flags generic noise, not real bugs).
+    level: 5
+
+    # Sanctum types currentAccessToken() as non-nullable via PHPDoc, but at
+    # runtime it is null for token-less requests — keep nullsafe calls.
+    treatPhpDocTypesAsCertain: false
