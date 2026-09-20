@@ -106,6 +106,31 @@ http://localhost:8000/docs
 Workflow guides (`transfers`, `stock takes`, `purchase orders`, …) live in
 `docs/` and render after the endpoints; the Scribe front page links them.
 
+Machine-readable specs are generated too:
+
+- OpenAPI: `GET /docs.openapi` (also `storage/app/private/scribe/openapi.yaml`)
+- Postman: `GET /docs.postman` (also `storage/app/private/scribe/collection.json`)
+
+## Endpoint Index
+
+All endpoints live under `/api/v1` and (except login / password reset)
+require `Authorization: Bearer <token>` plus an active account.
+
+| Area | Method & Path |
+|---|---|
+| Auth | `POST auth/login`, `POST auth/forgot-password`, `POST auth/reset-password` |
+| Auth | `POST auth/logout`, `POST auth/refresh`, `GET auth/profile`, `PUT/PATCH auth/profile` |
+| Branches | `GET/POST branches`, `GET/PUT/DELETE branches/{branch}`, `POST branches/{branch}/manager` |
+| Products | `GET/POST products`, `GET/PUT/DELETE products/{product}`, `GET products/{product}/price-history`, `POST products/import` |
+| Inventory | `GET inventory`, `POST inventory/adjust`, `GET inventory/movements` |
+| Transfers | `GET/POST inventory/transfers`, `GET inventory/transfers/{transfer}`, `PUT …/approve`, `PUT …/reject`, `PUT …/receive` |
+| Stock takes | `GET/POST inventory/stock-take`, `GET …/{stockTake}`, `PUT …/items`, `PUT …/approve`, `GET …/variance-report` |
+| Suppliers | `GET/POST suppliers`, `GET/PUT/DELETE suppliers/{supplier}` |
+| Purchase orders | `GET/POST purchase-orders`, `GET …/{purchaseOrder}`, `PUT …/send`, `POST …/receive`, `PUT …/cancel` |
+| Reports | `GET reports/{inventory-valuation,stock-movements,low-stock,product-performance,transfers}`, `GET reports/export/{type}` |
+| Notifications | `GET notifications`, `GET notifications/unread-count`, `PUT notifications/{notification}/read`, `PUT notifications/read-all` |
+| Audit logs | `GET audit-logs` (super-admin) |
+
 ## Testing & Quality Gates
 
 ```bash
