@@ -132,10 +132,10 @@ class ApiSmokeTest extends TestCase
 
     public function test_login_is_rate_limited(): void
     {
-        // Login allows 10 attempts per minute (see routes/api.php); the 11th
+        // Login allows 5 attempts per minute (see routes/api.php); the 6th
         // must 429 even with valid credentials — brute-force protection on
         // the public endpoint.
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             $this->postJson('/api/v1/auth/login', [
                 'email' => 'mgr@example.com',
                 'password' => 'wrong',

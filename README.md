@@ -49,7 +49,7 @@ AssetArray API demonstrates enterprise Laravel backend engineering:
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/assetarray-api.git
+git clone https://github.com/MistRoku/assetarray-api.git
 cd assetarray-api
 composer install
 cp .env.example .env

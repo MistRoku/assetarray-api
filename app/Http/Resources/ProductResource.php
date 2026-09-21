@@ -23,7 +23,7 @@ class ProductResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
+        $result = [
             'id' => $this->id,
             'sku' => $this->sku,
             'name' => $this->name,
@@ -32,7 +32,6 @@ class ProductResource extends JsonResource
             'category' => new CategoryResource($this->whenLoaded('category')),
             'supplier_id' => $this->supplier_id,
             'supplier' => new SupplierResource($this->whenLoaded('supplier')),
-            'cost_price' => $this->cost_price,
             'selling_price' => $this->selling_price,
             'tax_rate_override' => $this->tax_rate_override,
             'barcode' => $this->barcode,
@@ -44,5 +43,12 @@ class ProductResource extends JsonResource
             'updated_at' => $this->updated_at,
             'deleted_at' => $this->deleted_at,
         ];
+
+        // Only include cost_price for managers and above
+        if ($request->user()?->isManagerOrAbove()) {
+            $result['cost_price'] = $this->cost_price;
+        }
+
+        return $result;
     }
 }

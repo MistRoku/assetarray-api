@@ -75,12 +75,13 @@ final class InventoryService
                 ->first();
 
             // Missing level = first receipt for this product/branch: start at 0.
+            // Use firstOrCreate to atomically check-and-create, avoiding race
+            // conditions between the select and insert.
             if (! $stock) {
-                $stock = StockLevel::create([
-                    'product_id' => $product->id,
-                    'branch_id' => $data['branch_id'],
-                    'quantity' => 0,
-                ]);
+                $stock = StockLevel::firstOrCreate(
+                    ['product_id' => $product->id, 'branch_id' => $data['branch_id']],
+                    ['quantity' => 0]
+                );
             }
 
             $oldQuantity = $stock->quantity;

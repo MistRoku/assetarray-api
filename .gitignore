@@ -5,6 +5,9 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
 /.codex
 /.cursor/
 /.idea
@@ -18,10 +21,16 @@
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
+/public/vendor/scribe
 /storage/*.key
+/storage/app/private/scribe
 /storage/pail
 /vendor
-_ide_helper.php
+.scribe/endpoints.cache
+.scribe/endpoints
+resources/views/scribe
+resources/views/vendor
+laravel
 Homestead.json
 Homestead.yaml
 Thumbs.db

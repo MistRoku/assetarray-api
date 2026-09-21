@@ -14,6 +14,7 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        // Route redirects to /docs, so we expect a 302 redirect
+        $response->assertRedirect('/docs');
     }
 }
