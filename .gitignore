@@ -26,6 +26,8 @@ _ide_helper_models.php
 /storage/app/private/scribe
 /storage/pail
 /vendor
+.scribe/.filehashes
+.scribe/auth.md
 .scribe/endpoints.cache
 .scribe/endpoints
 resources/views/scribe
