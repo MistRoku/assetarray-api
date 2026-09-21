@@ -8,6 +8,7 @@ use App\Models\StockLevel;
 use App\Models\User;
 use App\Services\InventoryService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Validation\ValidationException;
 use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
@@ -125,7 +126,7 @@ class InventoryServiceTest extends TestCase
 
         $service = app(InventoryService::class);
 
-        $this->expectException(\Illuminate\Validation\ValidationException::class);
+        $this->expectException(ValidationException::class);
 
         $service->adjust([
             'product_id' => $product->id,

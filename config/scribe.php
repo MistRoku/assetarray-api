@@ -13,6 +13,9 @@ return [
     // The HTML <title> for the generated documentation.
     'title' => config('app.name').' API Documentation',
 
+    // Scribe wraps route extraction in DB transactions. Disable for SQLite
+    // which doesn't support concurrent transactions from artisan tinker.
+
     // A short description of your API. Will be included in the docs webpage, Postman collection and OpenAPI spec.
     'description' => '',
 
@@ -254,8 +257,8 @@ return [
 
     // For response calls, API resource responses and transformer responses,
     // Scribe will try to start database transactions, so no changes are persisted to your database.
-    // Tell Scribe which connections should be transacted here. If you only use one db connection, you can leave this as is.
-    'database_connections_to_transact' => [config('database.default')],
+    // Disabled for SQLite (doesn't support concurrent transactions from artisan tinker).
+    'database_connections_to_transact' => [],
 
     'fractal' => [
         // If you are using a custom serializer with league/fractal, you can specify it here.

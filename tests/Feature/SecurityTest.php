@@ -20,11 +20,17 @@ class SecurityTest extends TestCase
     use RefreshDatabase;
 
     private Branch $branchA;
+
     private Branch $branchB;
+
     private User $superAdmin;
+
     private User $managerA;
+
     private User $managerB;
+
     private User $staffA;
+
     private User $inactiveUser;
 
     protected function setUp(): void
